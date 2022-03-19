@@ -1,0 +1,16 @@
+{% extends "base.html" %} 
+
+{% block content %}
+    {% for tweet in tweets %}
+    <article class="media content-section">
+        <div class="media-body">
+          <div class="article-metadata">
+            <a class="article-author" href="#">{{ tweet.author_id }}</a>
+            <small class="text-muted">{{ tweet.created_at }}</small>
+          </div>
+          <h2><a class="article-title" href="#">{{ tweet.username }}</a></h2>
+          <p class="article-content">{{ tweet.text }}</p>
+        </div>
+      </article>
+    {% endfor %} 
+{% endblock content %}
