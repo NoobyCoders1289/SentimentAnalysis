@@ -5,6 +5,7 @@ import pandas as pd
 
 import requests
 from dotenv import load_dotenv
+
 load_dotenv()
 
 
@@ -56,8 +57,7 @@ class TwitterAPIData():
         It is used to write json data to csv.
 
     '''
-        
-    
+
     def __init__(self):
         '''
         Attributes
@@ -87,18 +87,17 @@ class TwitterAPIData():
             17872077   |@virginmedia
 
         '''
-        
 
         self.urls = []
         self.next_token = {}
         self.params = {"expansions": "author_id", "tweet.fields": "id,created_at,text,author_id",
-              "user.fields": "id,name,username,location", "max_results": 5, 
-              "start_time": "2021-03-02T17:00:00Z","pagination_token": self.next_token}
+                       "user.fields": "id,name,username,location", "max_results": 100,
+                       "start_time": "2021-03-02T17:00:00Z", "pagination_token": self.next_token}
         self.json_data = []
         self.json_response = {}
         self.user_id = [20678384, 15133627, 7117212, 118750085]
         self.bearer_token = os.getenv('BEARER_TOKEN')
-        
+
     def create_url(self):
         '''
         It uses user_ids to creates API endpoints and stores in urls list.
@@ -106,8 +105,7 @@ class TwitterAPIData():
         for user in self.user_id:
             self.urls.append(f"https://api.twitter.com/2/users/{user}/mentions")
 
-
-    def bearer_oauth(self,r):
+    def bearer_oauth(self, r):
         """
         Method required by bearer token authentication.
         """
@@ -115,33 +113,33 @@ class TwitterAPIData():
         r.headers["User-Agent"] = "v2UserMentionsPython"
         return r
 
-    def getting_next_page(self,url):
+    def getting_next_page(self, url):
         '''
             Method to get next_token and pass it to api endpoints to get more data.
         '''
         page_no = 1
-        for i in range(0,3):
-            #Inputs
+        for i in range(0, 20):
+            # Inputs
             count = 0
             max_count = 5
             flag = True
-            
+
             while flag:
-                if count>=max_count:
+                if count >= max_count:
                     break
                 print("----------------------------------------------------------------------------")
-                print("Token: ",self.next_token)
+                print("Token: ", self.next_token)
                 self.json_response = self.connect_to_endpoint(url)
                 result_count = self.json_response['meta']['result_count']
-                
+
                 ### if response has next_token
                 if 'next_token' in self.json_response['meta']:
                     result_count = self.json_response['meta']['result_count']
                     self.next_token = self.json_response['meta']['next_token']
-                    print("Next_Token : ",self.next_token)
+                    print("Next_Token : ", self.next_token)
 
                     if result_count is not None and result_count > 0 and self.next_token is not None:
-                        print("url Endpoint : ",url)
+                        print("url Endpoint : ", url)
                         self.write2csvFile()
                         count += result_count
                         # total_tweets += result_count
@@ -149,9 +147,9 @@ class TwitterAPIData():
                         print("Total Pages : ", page_no)
                         print("----------------------------------------------------------------------------")
                         time.sleep(5)
-                
+
                 ### if response has no next_token
-                else: 
+                else:
                     if result_count is not None and result_count > 0:
                         print("----------------------------------------------------------------------------")
                         self.write2csvFile()
@@ -167,22 +165,20 @@ class TwitterAPIData():
                 time.sleep(5)
             page_no += 1
 
-            
-    def connect_to_endpoint(self,url):
+    def connect_to_endpoint(self, url):
         '''
             It calls the Api endpoints and stores the response into json_response dict.
         '''
         self.params['pagination_token'] = self.next_token
         print(self.params)
-        response = requests.request("GET",url, auth=self.bearer_oauth, params=self.params)
+        response = requests.request("GET", url, auth=self.bearer_oauth, params=self.params)
         print(response.status_code)
         if response.status_code != 200:
             raise Exception(
                 f"Request returned an error: {response.status_code} {response.text}"
             )
-        #self.json_response = response.json()
+        # self.json_response = response.json()
         return response.json()
-
 
     def join_json(self):
         '''
@@ -191,31 +187,40 @@ class TwitterAPIData():
         # print(json.dumps(json_response))
         # print('-----------------------------------------------')
         for i in self.json_response['data']:
+            dic = {}
             for j in self.json_response['includes']['users']:
                 if i['author_id'] == j['id']:
-                    if 'location' not in j.keys():
-                        j['location']=''
-                    i.update(j)
-            self.json_data.append(i)
+                    dic['tweet_id'] = i['id']
+                    dic['user_id'] = i['author_id']
+                    dic['created_at'] = i['created_at']
+                    dic['tweet'] = i['text']
+                    dic['username'] = j['username']
+                    dic['name'] = j['name']
+                    if 'location' in j.keys():
+                        dic['location'] = j['location']
+                    else:
+                        dic['location'] = ""
+            self.json_data.append(dic)
         return self.json_data
-    
+
     def write2csvFile(self):
         data = self.join_json()
         df = pd.DataFrame.from_records(data)
-        df.to_csv(r"DataExtraction\\TweetsData.csv",index=False)
+        df.to_csv(r"static\\csv_files\\TweetsData.csv", index=False)
+
 
 def main():
     apiData = TwitterAPIData()
     apiData.create_url()
     for url in apiData.urls:
         apiData.getting_next_page(url)
-    
+
     '''
         dumping the extracted data to json file
     '''
     # with open(r"DataExtraction\\tweetsReview.json", 'w') as file:
     #     json.dump(apiData.json_data, file)
 
-        
+
 if __name__ == "__main__":
     main()
