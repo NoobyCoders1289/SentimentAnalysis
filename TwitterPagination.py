@@ -97,6 +97,8 @@ class TwitterAPIData():
         self.json_response = {}
         self.user_id = [20678384, 15133627, 7117212, 118750085]
         self.bearer_token = os.getenv('BEARER_TOKEN')
+        self.count = 0
+        self.max_count = 10000
 
     def create_url(self):
         '''
@@ -118,52 +120,43 @@ class TwitterAPIData():
             Method to get next_token and pass it to api endpoints to get more data.
         '''
         page_no = 1
-        for i in range(0, 20):
-            # Inputs
-            count = 0
-            max_count = 5
-            flag = True
+        flag = True
+        while flag:
+            if self.count >= self.max_count:
+                return 1
+            print("----------------------------------------------------------------------------")
+            print("Token: ", self.next_token)
+            self.json_response = self.connect_to_endpoint(url)
+            result_count = self.json_response['meta']['result_count']
 
-            while flag:
-                if count >= max_count:
-                    break
-                print("----------------------------------------------------------------------------")
-                print("Token: ", self.next_token)
-                self.json_response = self.connect_to_endpoint(url)
-                result_count = self.json_response['meta']['result_count']
+            ### if response has next_token
+            if 'next_token' in self.json_response['meta']:
+                self.next_token = self.json_response['meta']['next_token']
+                print("Next_Token : ", self.next_token)
 
-                ### if response has next_token
-                if 'next_token' in self.json_response['meta']:
-                    result_count = self.json_response['meta']['result_count']
-                    self.next_token = self.json_response['meta']['next_token']
-                    print("Next_Token : ", self.next_token)
+                if result_count is not None and result_count > 0 and self.next_token is not None:
+                    print("url Endpoint : ", url)
+                    self.write2csvFile()
+                    self.count += result_count
+                    print("Total # of Tweets added: ", self.count)
+                    print("Total Pages : ", page_no)
+                    page_no += 1
+                    time.sleep(2)
 
-                    if result_count is not None and result_count > 0 and self.next_token is not None:
-                        print("url Endpoint : ", url)
-                        self.write2csvFile()
-                        count += result_count
-                        # total_tweets += result_count
-                        print("Total # of Tweets added: ", count)
-                        print("Total Pages : ", page_no)
-                        print("----------------------------------------------------------------------------")
-                        time.sleep(5)
-
-                ### if response has no next_token
-                else:
-                    if result_count is not None and result_count > 0:
-                        print("----------------------------------------------------------------------------")
-                        self.write2csvFile()
-                        count += result_count
-                        # total_tweets += result_count
-                        print("Total # of Tweets added: ", count)
-                        print("Total Pages : ", page_no)
-                        print("----------------------------------------------------------------------------")
-                        time.sleep(5)
-                    flag = False
-                    self.next_token = None
-
-                time.sleep(5)
-            page_no += 1
+            ### if response has no next_token
+            else:
+                if result_count is not None and result_count > 0:
+                    self.write2csvFile()
+                    self.count += result_count
+                    print("Total # of Tweets added: ", self.count)
+                    print("Total Pages : ", page_no)
+                    page_no += 1
+                    print("----------------------------------------------------------------------------")
+                    time.sleep(2)
+                flag = False
+                self.next_token = None
+                return 
+            time.sleep(2)
 
     def connect_to_endpoint(self, url):
         '''
@@ -184,8 +177,6 @@ class TwitterAPIData():
         '''
             It is used to extract and join the data in required format, stores into json_data list.
         '''
-        # print(json.dumps(json_response))
-        # print('-----------------------------------------------')
         for i in self.json_response['data']:
             dic = {}
             for j in self.json_response['includes']['users']:
@@ -206,6 +197,7 @@ class TwitterAPIData():
     def write2csvFile(self):
         data = self.join_json()
         df = pd.DataFrame.from_records(data)
+        df.drop_duplicates(inplace=True, ignore_index=False)
         df.to_csv(r"static\\csv_files\\TweetsData.csv", index=False)
 
 
@@ -213,7 +205,9 @@ def main():
     apiData = TwitterAPIData()
     apiData.create_url()
     for url in apiData.urls:
-        apiData.getting_next_page(url)
+        m1 = apiData.getting_next_page(url)
+        if m1 == 1:
+            break
 
     '''
         dumping the extracted data to json file
