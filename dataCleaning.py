@@ -57,7 +57,7 @@ def cleanTxt(text):
 
 # LOADING DATA SET
 def load_data():
-    df = pd.read_csv('static/csv_files/TweetsData.csv')
+    df = pd.read_csv('static/csv_files/TweetsData1.csv')
     df.dropna(inplace=True)
     df.isnull().sum()
     df.drop_duplicates(keep='first', inplace=True, ignore_index=False)
