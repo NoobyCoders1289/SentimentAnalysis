@@ -1,0 +1,679 @@
+{
+    "data": [
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1504714218402193409"
+                }
+            ],
+            "id": "1504778671835566081",
+            "created_at": "2022-03-18T11:16:07.000Z",
+            "text": "@EE is there an outage in Birmingham at the moment?",
+            "author_id": "50554480"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1504776918079578114"
+                }
+            ],
+            "id": "1504777881544712196",
+            "created_at": "2022-03-18T11:12:59.000Z",
+            "text": "@EE The EE Community has quite a few similar cases so not just me",
+            "author_id": "69805646"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1504774888787259394"
+                }
+            ],
+            "id": "1504776918079578114",
+            "created_at": "2022-03-18T11:09:09.000Z",
+            "text": "@EE I'll leave it now, the discount was above a number of phones as an upgrade option, not a new line. I don't expect to need proof and didn't imagine it. Why do I have 4 EE lines, I ask myself!",
+            "author_id": "69805646"
+        },
+        {
+            "id": "1504776578441654272",
+            "created_at": "2022-03-18T11:07:48.000Z",
+            "text": "@EE My DD has been taken and it appears that I've been charged £6.95 delivery due to completing the upgrade over the phone, I only called because the #MYEE System wouldn't allow it. charging me for your system errors seems very unfair!!",
+            "author_id": "578847558"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1504714218402193409"
+                }
+            ],
+            "id": "1504776426037424128",
+            "created_at": "2022-03-18T11:07:12.000Z",
+            "text": "@EE Can someone DM me on here asap #complaint",
+            "author_id": "78574078"
+        },
+        {
+            "id": "1504775283181826061",
+            "created_at": "2022-03-18T11:02:39.000Z",
+            "text": "@EE love being mislead by ee",
+            "author_id": "309010204"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1504774003537240067"
+                }
+            ],
+            "id": "1504774350418976771",
+            "created_at": "2022-03-18T10:58:57.000Z",
+            "text": "@EE No problem. Thanks for confirming",
+            "author_id": "27238477"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1504773609088237571"
+                }
+            ],
+            "id": "1504774103840051202",
+            "created_at": "2022-03-18T10:57:58.000Z",
+            "text": "@EE No, I didn't expect to be needing proof.  I was upgrading my current line and adding a new phone to that",
+            "author_id": "69805646"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1504768057704697857"
+                }
+            ],
+            "id": "1504774006586683408",
+            "created_at": "2022-03-18T10:57:35.000Z",
+            "text": "@H_chapman17 @EE https://t.co/d2J1tlKiJi",
+            "author_id": "29154734"
+        },
+        {
+            "id": "1504773202572197889",
+            "created_at": "2022-03-18T10:54:23.000Z",
+            "text": "@EE does Student Beans discount code work on Good As New upgrades?",
+            "author_id": "27238477"
+        },
+        {
+            "id": "1504772952579006467",
+            "created_at": "2022-03-18T10:53:23.000Z",
+            "text": "@EE hello, we're getting your broadband installed next Friday and I just need to sanity check that OpenReach are aware that we don't have a BT socket to plug the router in to. We had two visits from them when trying to get Plusnet set up a few weeks ago and they didn't manage it.",
+            "author_id": "18798177"
+        },
+        {
+            "id": "1504772661557219330",
+            "created_at": "2022-03-18T10:52:14.000Z",
+            "text": "@EE spoke with you yesterday about signal issues - now I have no signal &amp; WiFi calling isn’t working… no way to contact yourselves to resolve the issue…",
+            "author_id": "83811706"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1504771324488654848"
+                }
+            ],
+            "id": "1504772478152945676",
+            "created_at": "2022-03-18T10:51:30.000Z",
+            "text": "@EE I guess I'll not upgrade and purchase another way",
+            "author_id": "69805646"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1504770790818000908"
+                }
+            ],
+            "id": "1504771324488654848",
+            "created_at": "2022-03-18T10:46:55.000Z",
+            "text": "@EE Online, it was just available",
+            "author_id": "69805646"
+        },
+        {
+            "id": "1504770475213402120",
+            "created_at": "2022-03-18T10:43:33.000Z",
+            "text": "@EE  where's this months update for the pixel 6 pro please?",
+            "author_id": "916491"
+        },
+        {
+            "id": "1504770071671025681",
+            "created_at": "2022-03-18T10:41:57.000Z",
+            "text": "@EE Yesterday I was offered a 10% loyalty discount on an update which I was considering.  Today, however, I am not offered the same discount.  I presume I'm getting that because I'm a long term customer with 4 mobile numbers.  Can you tell me why it's gone please?",
+            "author_id": "69805646"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1504762352855625744"
+                }
+            ],
+            "id": "1504769725653528593",
+            "created_at": "2022-03-18T10:40:34.000Z",
+            "text": "@joshsherwin12 @EE @beatport @Rudimental @itsjuniorsimba Thank you!!",
+            "author_id": "24918393"
+        },
+        {
+            "id": "1504768805867827206",
+            "created_at": "2022-03-18T10:36:55.000Z",
+            "text": "trying to transfer my number to @EE and the website isn't even loading?? so now i'll have no working phone for god knows how long",
+            "author_id": "24038326"
+        },
+        {
+            "id": "1504768057704697857",
+            "created_at": "2022-03-18T10:33:56.000Z",
+            "text": "Finally arrived @EE https://t.co/9UAwSYncJg",
+            "author_id": "36966219"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1504732021213564928"
+                }
+            ],
+            "id": "1504767212015562753",
+            "created_at": "2022-03-18T10:30:35.000Z",
+            "text": "@EE Done :)",
+            "author_id": "248599588"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1504764575920578562"
+                }
+            ],
+            "id": "1504766996193452033",
+            "created_at": "2022-03-18T10:29:43.000Z",
+            "text": "@EE It's OK Casey, I'm being flippant.",
+            "author_id": "57560430"
+        },
+        {
+            "id": "1504766633918799873",
+            "created_at": "2022-03-18T10:28:17.000Z",
+            "text": "Residents in #BTR developments continue to rate their overall experience more highly than tenants in #BTS.\nDownload the @Homeviews_com  2022 National #BuildtoRent Report to find out more: https://t.co/3fMdqcarIT. @Yardi @AGofC_  @SAYProperty  @EE.\n#HomeViews #ResidentReviews https://t.co/q3JgBXbuFy",
+            "author_id": "970966964658155520"
+        },
+        {
+            "id": "1504762992667340801",
+            "created_at": "2022-03-18T10:13:49.000Z",
+            "text": "@EE Thanks Dua for excellent service with a smile yesterday at Solihull, Touchwood store.    Dealt understandingly with the needs of elderly customers.    Thank you!",
+            "author_id": "1066358226"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1504443063250440196"
+                }
+            ],
+            "id": "1504762352855625744",
+            "created_at": "2022-03-18T10:11:16.000Z",
+            "text": "@EE @beatport @Rudimental @ariellefree @itsjuniorsimba Class set @ariellefree",
+            "author_id": "559396058"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1504714218402193409"
+                }
+            ],
+            "id": "1504760660462391327",
+            "created_at": "2022-03-18T10:04:33.000Z",
+            "text": "@EE Internet is down and I do not have the number associated with it. Can I speak to a human about this please?",
+            "author_id": "754721953806770180"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1504714218402193409"
+                }
+            ],
+            "id": "1504759098449055788",
+            "created_at": "2022-03-18T09:58:20.000Z",
+            "text": "@EE I messaged EE days ago now, multiple times, and still haven't had a response from you.",
+            "author_id": "779346441928138753"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1504738452742582274"
+                }
+            ],
+            "id": "1504758676875366405",
+            "created_at": "2022-03-18T09:56:40.000Z",
+            "text": "@EE",
+            "author_id": "20657457"
+        },
+        {
+            "id": "1504758167145701377",
+            "created_at": "2022-03-18T09:54:38.000Z",
+            "text": "@EE great service from Nicole at Sunderland call centre this morning. Rang about contract coming to an end. Offered a great deal. Signed back up 👍🏻quick and easy.",
+            "author_id": "1908884682"
+        },
+        {
+            "id": "1504757062399676418",
+            "created_at": "2022-03-18T09:50:15.000Z",
+            "text": "Fuming at going to @EE Croydon 2 days in a row and their opening times being wrong each time. Wondering why I’ve switched at this point.",
+            "author_id": "52213895"
+        },
+        {
+            "id": "1504756796149407745",
+            "created_at": "2022-03-18T09:49:11.000Z",
+            "text": "@EE absolutely sick of your piss poor customer service.\nI've been paying over £300 a month for phones and have done for years and years, yet you lie and take the piss.",
+            "author_id": "1031610013385728000"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1504751440811732998"
+                }
+            ],
+            "id": "1504755391032447004",
+            "created_at": "2022-03-18T09:43:36.000Z",
+            "text": "@EE Gemma.  I didn’t catch the other lady’s name.",
+            "author_id": "366501169"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1504714218402193409"
+                }
+            ],
+            "id": "1504754744753012738",
+            "created_at": "2022-03-18T09:41:02.000Z",
+            "text": "@EE I ordered an upgrade phone on Tuesday and had emails to say the order was confirmed and ‘on the way.’ Since Tuesday, I’ve heard nothing from EE or DPD. I’ve ordered it to be delivered to store. Are you able to give me an update?",
+            "author_id": "63440888"
+        },
+        {
+            "id": "1504754228316852239",
+            "created_at": "2022-03-18T09:38:59.000Z",
+            "text": "Thank you @EE for providing such a reliable and fast service. It has proved invaluable after I foolishly tried to switch to @CommunityFibre",
+            "author_id": "878335784486555648"
+        },
+        {
+            "id": "1504753971059216389",
+            "created_at": "2022-03-18T09:37:58.000Z",
+            "text": "@EE I ordered a screen protector with my new phone but the screen protector arrived smashed. I’ve tried emailing, no response, I’ve tried webchat who asked me to call and I’ve tried calling but there are no options for what I need. I’d just like a new one sending out please!!",
+            "author_id": "180068246"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1504714218402193409"
+                }
+            ],
+            "id": "1504753026736836624",
+            "created_at": "2022-03-18T09:34:13.000Z",
+            "text": "@EE If I would be explained that I have to pay 15 pounds extra to watch bt sports on large screen I wouldn't buy Smart Benefit SIM only contract.",
+            "author_id": "1250165337536049153"
+        },
+        {
+            "id": "1504750828908949504",
+            "created_at": "2022-03-18T09:25:29.000Z",
+            "text": "@EE Great service in your Horsham store. Very helpful and patient with a couple of older gentlemen. 👍",
+            "author_id": "366501169"
+        },
+        {
+            "id": "1504750012709982214",
+            "created_at": "2022-03-18T09:22:14.000Z",
+            "text": "@EE I am less than a mile outside of Lincoln city centre and my signal is atrocious, why",
+            "author_id": "1504738483960786946"
+        },
+        {
+            "id": "1504749805209374724",
+            "created_at": "2022-03-18T09:21:25.000Z",
+            "text": "@ee shocking how something your fault we have to pay, it’s not happening",
+            "author_id": "29986711"
+        }
+    ],
+    "includes": {
+        "users": [
+            {
+                "username": "Lukey_Poynter",
+                "name": "Luke Poynter",
+                "id": "50554480"
+            },
+            {
+                "username": "paulswift36",
+                "name": "Paul Swift",
+                "location": "Bransgore",
+                "id": "69805646"
+            },
+            {
+                "username": "ItsJamesPowers",
+                "name": "James 🇬🇧 🇺🇦",
+                "location": "Here and There",
+                "id": "578847558"
+            },
+            {
+                "username": "HEALERH",
+                "name": "HAYLEY NEWTON",
+                "location": "LONDON AND ESSEX ",
+                "id": "78574078"
+            },
+            {
+                "username": "mickmiller27",
+                "name": "rob",
+                "id": "309010204"
+            },
+            {
+                "username": "xXRandomTaskXx",
+                "name": "Stewart McConnell",
+                "location": "Glasgow",
+                "id": "27238477"
+            },
+            {
+                "username": "Austin4evaLEEDS",
+                "name": "Austin Pillay 🇿🇦",
+                "location": "Pietermaritzburg, South Africa",
+                "id": "29154734"
+            },
+            {
+                "username": "kerryjeanlister",
+                "name": "KJL",
+                "location": "Hove, England",
+                "id": "18798177"
+            },
+            {
+                "username": "megathersmith",
+                "name": "Megan Athersmith",
+                "location": "London",
+                "id": "83811706"
+            },
+            {
+                "username": "trooperbill",
+                "name": "mark rushworth",
+                "location": "uk",
+                "id": "916491"
+            },
+            {
+                "username": "ariellefree",
+                "name": "Arielle Free",
+                "location": "LONDON/GLASGOW",
+                "id": "24918393"
+            },
+            {
+                "username": "hatthewrhys",
+                "name": "hannah",
+                "location": "semi by the sea",
+                "id": "24038326"
+            },
+            {
+                "username": "H_chapman17",
+                "name": "Harry",
+                "location": "Grantham, England",
+                "id": "36966219"
+            },
+            {
+                "username": "KhanCatOfficial",
+                "name": "Khan",
+                "location": "my house, England",
+                "id": "248599588"
+            },
+            {
+                "username": "ersatz1967",
+                "name": "John Illingworth",
+                "location": "Elloughton-cum-Brough",
+                "id": "57560430"
+            },
+            {
+                "username": "Homeviews_com",
+                "name": "HomeViews",
+                "id": "970966964658155520"
+            },
+            {
+                "username": "sm1ffs",
+                "name": "janice smith",
+                "id": "1066358226"
+            },
+            {
+                "username": "joshsherwin12",
+                "name": "Josh Sherwin 💙",
+                "location": "North yorkshire",
+                "id": "559396058"
+            },
+            {
+                "username": "Breadgoods",
+                "name": "Breadgoods",
+                "id": "754721953806770180"
+            },
+            {
+                "username": "Yehti97",
+                "name": "⫷Yεhτı⫸🇬🇧🇪🇺🇺🇦",
+                "id": "779346441928138753"
+            },
+            {
+                "username": "NouCampyFTW",
+                "name": "Nou Campy FTW!",
+                "location": "Dundee",
+                "id": "20657457"
+            },
+            {
+                "username": "fevano1",
+                "name": "Mark Feva",
+                "location": "North East England ",
+                "id": "1908884682"
+            },
+            {
+                "username": "itsundeep",
+                "name": "Sundeep Verdi",
+                "location": "UK",
+                "id": "52213895"
+            },
+            {
+                "username": "Darrenappleby13",
+                "name": "Darren appleby",
+                "location": "Oxford, England",
+                "id": "1031610013385728000"
+            },
+            {
+                "username": "jamesarwallace",
+                "name": "James Wallace",
+                "location": "Horsham, West Sussex, UK",
+                "id": "366501169"
+            },
+            {
+                "username": "davidw_books",
+                "name": "David Williams",
+                "location": "London, England",
+                "id": "63440888"
+            },
+            {
+                "username": "cmtrimby",
+                "name": "Christopher Trimby",
+                "id": "878335784486555648"
+            },
+            {
+                "username": "laurenpugh64",
+                "name": "Lauren",
+                "location": "England, United Kingdom",
+                "id": "180068246"
+            },
+            {
+                "username": "MBudzewski",
+                "name": "Marcin Budzewski",
+                "id": "1250165337536049153"
+            },
+            {
+                "username": "Beth84310727",
+                "name": "Beth",
+                "id": "1504738483960786946"
+            },
+            {
+                "username": "ozewoze",
+                "name": "zoe",
+                "location": "Newcastle upon Tyne, UK",
+                "id": "29986711"
+            }
+        ],
+        "tweets": [
+            {
+                "id": "1504714218402193409",
+                "created_at": "2022-03-18T07:00:00.000Z",
+                "text": "Good morning and happy Friday! Let us know if you need any help today. We’re here until 11pm.",
+                "author_id": "7117212"
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1504774888787259394"
+                    }
+                ],
+                "id": "1504776918079578114",
+                "created_at": "2022-03-18T11:09:09.000Z",
+                "text": "@EE I'll leave it now, the discount was above a number of phones as an upgrade option, not a new line. I don't expect to need proof and didn't imagine it. Why do I have 4 EE lines, I ask myself!",
+                "author_id": "69805646"
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1504774103840051202"
+                    }
+                ],
+                "id": "1504774888787259394",
+                "created_at": "2022-03-18T11:01:05.000Z",
+                "text": "@paulswift36 Menu &gt; Upgrade &gt; Contact us (bottom left) &gt; Message us, or give our upgrades team a call on 150 from your EE phone or 08000798586 from any other phone. (2/2) -Michael D",
+                "author_id": "7117212"
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1504773202572197889"
+                    }
+                ],
+                "id": "1504774003537240067",
+                "created_at": "2022-03-18T10:57:34.000Z",
+                "text": "@xXRandomTaskXx Hi, Stewart. I hope you are well today. I am sorry, the two are not able to be used together. - Sarahjane",
+                "author_id": "7117212"
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1504771324488654848"
+                    }
+                ],
+                "id": "1504773609088237571",
+                "created_at": "2022-03-18T10:56:00.000Z",
+                "text": "@paulswift36 Did you get a screenshot of the discount at all? The only one that would usually be applied online would be if you were adding an additional line, where the new phone would get a 10% discount. -Michael D",
+                "author_id": "7117212"
+            },
+            {
+                "id": "1504768057704697857",
+                "created_at": "2022-03-18T10:33:56.000Z",
+                "text": "Finally arrived @EE https://t.co/9UAwSYncJg",
+                "author_id": "36966219"
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1504770790818000908"
+                    }
+                ],
+                "id": "1504771324488654848",
+                "created_at": "2022-03-18T10:46:55.000Z",
+                "text": "@EE Online, it was just available",
+                "author_id": "69805646"
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1504770071671025681"
+                    }
+                ],
+                "id": "1504770790818000908",
+                "created_at": "2022-03-18T10:44:48.000Z",
+                "text": "@paulswift36 Hi Paul. It is great to hear you are looking to upgrade. \n\nI'm not able to see your upgrade offers here, but any offers are always subject to change. Did you speak to someone over the phone initially or was it online? -Michael D",
+                "author_id": "7117212"
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1504443063250440196"
+                    }
+                ],
+                "id": "1504762352855625744",
+                "created_at": "2022-03-18T10:11:16.000Z",
+                "text": "@EE @beatport @Rudimental @ariellefree @itsjuniorsimba Class set @ariellefree",
+                "author_id": "559396058"
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1504583842652426241"
+                    }
+                ],
+                "id": "1504732021213564928",
+                "created_at": "2022-03-18T08:10:45.000Z",
+                "text": "@KhanCatOfficial Hiya Khan :) How are you? I always want you to be getting the best connection as I know it's important. I can certainly take a look at this and find out what's going on. Can you pop me a DM with your postcode and mobile number, please? -Kelsey https://t.co/m14c5xhQi0",
+                "author_id": "7117212"
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1504744338684850176"
+                    }
+                ],
+                "id": "1504764575920578562",
+                "created_at": "2022-03-18T10:20:06.000Z",
+                "text": "@ersatz1967 It is more in relation to communicating with the networks whilst abroad which is why it can take a little time. It is not always that this happens however. Is there anything I can check out for you? - Casey",
+                "author_id": "7117212"
+            },
+            {
+                "id": "1504443063250440196",
+                "created_at": "2022-03-17T13:02:32.000Z",
+                "text": "EE x @BEATPORT present PARALLEL 5G. Watch the live stream tonight from 7pm at Millennium Square, Leeds or here!\n\n@Rudimental @ariellefree @itsjuniorsimba &amp; Manami https://t.co/BcEobb44nT",
+                "author_id": "7117212"
+            },
+            {
+                "id": "1504738452742582274",
+                "created_at": "2022-03-18T08:36:18.000Z",
+                "text": "@O2 @TMobileHelp @VodafoneUK @ThreeUK if I purchase a mobile phone today will the price go up next. Month due to. Rpi?",
+                "author_id": "20657457"
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1504750828908949504"
+                    }
+                ],
+                "id": "1504751440811732998",
+                "created_at": "2022-03-18T09:27:55.000Z",
+                "text": "@jamesarwallace Hey James. Thanks for taking the time to share this fantastic feedback with us.\n\nDid you manage to catch their names at all? -Michael D",
+                "author_id": "7117212"
+            }
+        ]
+    },
+    "meta": {
+        "oldest_id": "1504749805209374724",
+        "newest_id": "1504778671835566081",
+        "previous_token": "77qpymm88g5h9vqklurc07jeo3dr7bbinli9cz0ri173l",
+        "result_count": 38
+    }
+}

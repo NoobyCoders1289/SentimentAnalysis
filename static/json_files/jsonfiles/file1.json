@@ -1,0 +1,1867 @@
+{
+    "data": [
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1503778049203924994"
+                }
+            ],
+            "id": "1506031517923000326",
+            "created_at": "2022-03-21T22:14:29.000Z",
+            "author_id": "192608384",
+            "text": "@VodafoneUK #DreamHoliday making friends with a bear in Hawaii!"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1506028175729610755"
+                }
+            ],
+            "id": "1506028592765050885",
+            "created_at": "2022-03-21T22:02:51.000Z",
+            "author_id": "569314174",
+            "text": "@BromleyCommuter @VodafoneUK We now have a new proposal from a different party which we are exploring and I'm reliably informed this could be live later this year."
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505992729750294533"
+                }
+            ],
+            "id": "1506028175729610755",
+            "created_at": "2022-03-21T22:01:12.000Z",
+            "author_id": "569314174",
+            "text": "@BromleyCommuter @VodafoneUK Hi, London bridge station has poor coverage due to the persistent failure of others to decide on the best technical and commercial solution at London Bridge station. Vodafone have been working tirelessly for over 5 years now to depoy a dedicated solution but this has  failed"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1506003556989558789"
+                }
+            ],
+            "id": "1506015452879007746",
+            "created_at": "2022-03-21T21:10:39.000Z",
+            "author_id": "332773970",
+            "text": "@VodafoneUK this is not working, no one is responding via DM and your online chat person has just hung up on her. We need help quickly, her other accounts have now been compromised and she needs her phone number back to recover them"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "quoted",
+                    "id": "1506002984580362240"
+                }
+            ],
+            "id": "1506003741362860035",
+            "created_at": "2022-03-21T20:24:06.000Z",
+            "author_id": "1099514911",
+            "text": "@VodafoneUK @Ker_Anderson Same thing you get apologies every few days but no fix … I guess sending a SMS is cheaper then sending out an engineer … this is simple just tell us a fix date why is this in the hard box. https://t.co/bQq1uEMYbp"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1506001023785226243"
+                }
+            ],
+            "id": "1506003482607763461",
+            "created_at": "2022-03-21T20:23:05.000Z",
+            "author_id": "772298196",
+            "text": "@PaulinKuranchie @VodafoneUK OK. I'm glad it's not just us."
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505999915033542663"
+                }
+            ],
+            "id": "1506003392568741890",
+            "created_at": "2022-03-21T20:22:43.000Z",
+            "author_id": "772298196",
+            "text": "@VodafoneUK Hi. I've just checked it and it seems to say it's OK. But my connection kept cutting out. On Saturday I tried to send a WhatsApp message to my friend and it took a while to get it. She had the same problem."
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1503778049203924994"
+                }
+            ],
+            "id": "1506002298635538440",
+            "created_at": "2022-03-21T20:18:22.000Z",
+            "author_id": "1363597381254721539",
+            "text": "@VodafoneUK Hunt for a lost City in Costa Rica \uD83C\uDDE8\uD83C\uDDF7 #DreamHoliday #VeryMeRewards https://t.co/hBEBwhRyhy"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505993809943044101"
+                }
+            ],
+            "id": "1506001023785226243",
+            "created_at": "2022-03-21T20:13:18.000Z",
+            "author_id": "194791456",
+            "text": "@louisekwarteng @VodafoneUK I had same issues over the weekend. They actually sent me a message acknowledging it yesterday"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505993226121056259"
+                }
+            ],
+            "id": "1505994019851186184",
+            "created_at": "2022-03-21T19:45:29.000Z",
+            "author_id": "1099514911",
+            "text": "@VodafoneUK @VodafoneUK @Ker_Anderson … just give us all publicly a fix date https://t.co/YCnGuxDQ1D"
+        },
+        {
+            "id": "1505993809943044101",
+            "created_at": "2022-03-21T19:44:38.000Z",
+            "author_id": "772298196",
+            "text": "Is anyone having issues with @VodafoneUK Internet on their phones?  Mine has been very intermittent and cuts out at inopportune moments. My friend said she had similar problems on Saturday. But please let me know."
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "quoted",
+                    "id": "1505992245559926792"
+                }
+            ],
+            "id": "1505992729750294533",
+            "created_at": "2022-03-21T19:40:21.000Z",
+            "author_id": "1099514911",
+            "text": "@VodafoneUK @Ker_Anderson It doesn’t need a DM just pay some engineers to fix the network at London Bridge https://t.co/GvqlXGbQVp"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1497264134743810053"
+                }
+            ],
+            "id": "1505989407916138512",
+            "created_at": "2022-03-21T19:27:09.000Z",
+            "author_id": "1099514911",
+            "text": "@VodafoneUK @Ker_Anderson … nearly a month later still no data service at London Bridge the best we get you is you know there is an issue clearly no one senior at Vodafone uses London Bridge station https://t.co/w2U1ChARra"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505985460690161667",
+            "created_at": "2022-03-21T19:11:28.000Z",
+            "author_id": "556018303",
+            "text": "@VodafoneUK I’m so happy when you’re here"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505977090813927428"
+                }
+            ],
+            "id": "1505978239461822470",
+            "created_at": "2022-03-21T18:42:46.000Z",
+            "author_id": "42745358",
+            "text": "@VodafoneUK OK! What times are helplines open till please?"
+        },
+        {
+            "id": "1505974940784336905",
+            "created_at": "2022-03-21T18:29:40.000Z",
+            "author_id": "42745358",
+            "text": "@VodafoneUK Hello! I have a tablet contract that ran out in November &amp; has been carried on monthly. I would like to cancel it now but I can't get through to anyone when I call :( could this be done online? Thanks!"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505951503705649154"
+                }
+            ],
+            "id": "1505964729814196231",
+            "created_at": "2022-03-21T17:49:05.000Z",
+            "author_id": "368256015",
+            "text": "@VodafoneUK I am fan of Red Bull"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505958658361937921",
+            "created_at": "2022-03-21T17:24:58.000Z",
+            "author_id": "2723841",
+            "text": "@VodafoneUK I’m so happy when I get back to work I will have to see you soon thanks for letting me know thanks for letting me help you with my work computer and I will do it soon as I can get it done"
+        },
+        {
+            "id": "1505948748043759619",
+            "created_at": "2022-03-21T16:45:35.000Z",
+            "author_id": "865478035780157442",
+            "text": "@VodafoneUK when is your network problem going to be sorted out?! I've not a phone to use since 9am this morning!!"
+        },
+        {
+            "id": "1505944137866125313",
+            "created_at": "2022-03-21T16:27:16.000Z",
+            "author_id": "19937627",
+            "text": ".@VodafoneUK FTTP broadband now available for ‘SoHo’ sector https://t.co/Llp4siZtGK"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505936609082028035"
+                }
+            ],
+            "id": "1505936767647723528",
+            "created_at": "2022-03-21T15:57:59.000Z",
+            "author_id": "825692036657459201",
+            "text": "@VodafoneUK That's for anyone reading this with a Moto G9 Play on vodafone who's been misled into buying a new phone due to your incorrect (it seems) scare mongering emails."
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505261064174415873"
+                }
+            ],
+            "id": "1505936609082028035",
+            "created_at": "2022-03-21T15:57:21.000Z",
+            "author_id": "825692036657459201",
+            "text": "@VodafoneUK Oh as an update, turns out the Moto G9 Play as sold by you is not compatible with Wifi Calling and your guides regarding it (after recommended/security updates) are wrong on every level.\nBut it also turns out that your checker and \"buy a new phone now!\" emails are wrong too."
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505645810175905797"
+                }
+            ],
+            "id": "1505934285710180361",
+            "created_at": "2022-03-21T15:48:07.000Z",
+            "author_id": "1052958783532601345",
+            "text": "@Tsunahmie1 @VodafoneUK Amazing!! Wonderful to hear you managed to find a great deal with @VodafoneUK \uD83D\uDC4F\nRoll on the 24th March for release!"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505930515802693639",
+            "created_at": "2022-03-21T15:33:08.000Z",
+            "author_id": "2863001",
+            "text": "@VodafoneUK I'm so happy when you get a chance to see you soon and I will be happy to help you with the child care center for the use of the non working number."
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505921961129652230"
+                }
+            ],
+            "id": "1505930212919418880",
+            "created_at": "2022-03-21T15:31:56.000Z",
+            "author_id": "368256015",
+            "text": "@VodafoneUK Yep not the result i wanted"
+        },
+        {
+            "id": "1505925138520449028",
+            "created_at": "2022-03-21T15:11:46.000Z",
+            "author_id": "579197815",
+            "text": "@VodafoneUK @vodafone this is why I'll be leaving you before my renewal .. 78mb my foot .. #Vodafone #Vodafonedown https://t.co/fhqf4xCQSQ"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1503778049203924994"
+                }
+            ],
+            "id": "1505916818245959681",
+            "created_at": "2022-03-21T14:38:42.000Z",
+            "author_id": "2241206546",
+            "text": "@VodafoneUK #DreamHoliday Japan to ski down the tallest mountain...best get practising!"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505915300520382472",
+            "created_at": "2022-03-21T14:32:40.000Z",
+            "author_id": "129848921",
+            "text": "@VodafoneUK Im so.happy when. You can"
+        },
+        {
+            "id": "1505910318035357698",
+            "created_at": "2022-03-21T14:12:52.000Z",
+            "author_id": "753290949690810368",
+            "text": "@VodafoneUK I have 2 contacts with you I have turned off secure net but it's turned it self on one phone but I can't turn it off as it\nSays it is off but its charging me for it"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505885719230914567"
+                }
+            ],
+            "id": "1505910150229602306",
+            "created_at": "2022-03-21T14:12:12.000Z",
+            "author_id": "466341559",
+            "text": "@JaH_HY Hey! We appreciate you reaching out. We recommend you contact @VodafoneUK via DM, they will be able to assist you with your query."
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1498704627000233985"
+                }
+            ],
+            "id": "1505909723144589314",
+            "created_at": "2022-03-21T14:10:31.000Z",
+            "author_id": "837271780003885056",
+            "text": "@VodafoneUK #VodafoneTreats Getting out in the sunshine and exploring the Scottish coastline has definitely put a spring in my step I feel so much more alive! https://t.co/AXrIicYnfv"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1498704627000233985"
+                }
+            ],
+            "id": "1505905371910606851",
+            "created_at": "2022-03-21T13:53:13.000Z",
+            "author_id": "1402293903894761473",
+            "text": "@VodafoneUK #VodafoneTreats  it’s having an amazing time with my muscular dystrophy warrior! Capturing every fun and incredible moment and just taking each up and down with a pinch of salt and chocolate ice cream \uD83C\uDF66! The spring in our step is this one taking chocolatey steps few days ago \uD83D\uDE0D https://t.co/gjKIJpb5ss"
+        },
+        {
+            "id": "1505900687074414592",
+            "created_at": "2022-03-21T13:34:36.000Z",
+            "author_id": "386486785",
+            "text": "@VodafoneUK Horrible home broadband experience. No internet &amp; getting same issue repeated within 2 weeks? With WFH, how one rely on your services? @SkyUK i had never faced this problem but had to switch as fiber is not available via Sky at my postcode.#broadband #CustomerService"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505896186691137538"
+                }
+            ],
+            "id": "1505896662274818050",
+            "created_at": "2022-03-21T13:18:37.000Z",
+            "author_id": "2644645745",
+            "text": "@benjaminjmiller @VodafoneUK Same in Aberdeen"
+        },
+        {
+            "id": "1505885597621272576",
+            "created_at": "2022-03-21T12:34:39.000Z",
+            "author_id": "466341559",
+            "text": "Today is International Day for the Elimination of Racial Discrimination.\n\n@VodafoneUK’s Multicultural Inclusion Network was set up to help our employees navigate challenges and progress in their careers.\n\nHear the founder, Sade's story. #FightRacism https://t.co/aM9rq61YJZ"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505870844886753280"
+                }
+            ],
+            "id": "1505882856622538757",
+            "created_at": "2022-03-21T12:23:45.000Z",
+            "author_id": "171940914",
+            "text": "@VodafoneUK Lets see if the general public reply shall we \uD83E\uDD23\uD83D\uDC4D\uD83C\uDFFC"
+        },
+        {
+            "id": "1505882089408901127",
+            "created_at": "2022-03-21T12:20:42.000Z",
+            "author_id": "90182842",
+            "text": "@VodafoneUK Hi Guys. I want to make an additional payment on my account as I'm expecting a higher than normal bill for next month. Cant see the make  a payment button anywhere. I have more than one number associated with the account. Is that potentially affecting things?"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505877831707987980",
+            "created_at": "2022-03-21T12:03:47.000Z",
+            "author_id": "107029339",
+            "text": "@VodafoneUK I'm so happy when I get a chance to sort out the other day and I will be lovely to see you soon xx #VodafoneTreats"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1503778049203924994"
+                }
+            ],
+            "id": "1505866068409176064",
+            "created_at": "2022-03-21T11:17:03.000Z",
+            "author_id": "2180432083",
+            "text": "@VodafoneUK I’m going Down Under to Australia \uD83C\uDDE6\uD83C\uDDFA to feed the penguins \uD83D\uDC27\n#DreamHoliday"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1503778049203924994"
+                }
+            ],
+            "id": "1505865964084203523",
+            "created_at": "2022-03-21T11:16:38.000Z",
+            "author_id": "2180432083",
+            "text": "@VodafoneUK I’m going to Australia \uD83C\uDDE6\uD83C\uDDFA to feed the penguins \uD83D\uDC27\n#DreamHoliday"
+        },
+        {
+            "id": "1505854035244552193",
+            "created_at": "2022-03-21T10:29:14.000Z",
+            "author_id": "50628631",
+            "text": "Hi @O2 do you do any corporate discounts due to employer contracts like @VodafoneUK advantage? Do you have a link please? I know my employer uses both networks. Thanks"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505850068221448193",
+            "created_at": "2022-03-21T10:13:28.000Z",
+            "author_id": "478043251",
+            "text": "@VodafoneUK I am happy when I am a good friend to have an hour to talk about what we can do.) \n\nThat's funny because I always listen to my friends when they are down x\n#vodafonetreats"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505844455789715460",
+            "created_at": "2022-03-21T09:51:10.000Z",
+            "author_id": "345636990",
+            "text": "@VodafoneUK I’m so happy when you are home and I don’t know if I have too many things to do. \uD83D\uDE48\uD83D\uDE02"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505838125351907330",
+            "created_at": "2022-03-21T09:26:00.000Z",
+            "author_id": "70453172",
+            "text": "@VodafoneUK \"I'm so happy when I get a chance to win a trip to NYC for a few days' I mean it's not wrong. Love New York! #VodafoneTreats https://t.co/zgUqdkhsY7"
+        },
+        {
+            "id": "1505831527090991104",
+            "created_at": "2022-03-21T08:59:47.000Z",
+            "author_id": "940345362409279489",
+            "text": "Exciting! @VodafoneUK will work alongside Emma Raducanu as an ambassador for 'Play Your Way to Wimbledon’, working with the LTA to help inspire future tennis stars https://t.co/S3AN0b81Qn https://t.co/6khggmtk7G"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505821522073694209",
+            "created_at": "2022-03-21T08:20:02.000Z",
+            "author_id": "907694160798474240",
+            "text": "@VodafoneUK I’m so happy when you are home and I have a good day"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505820291083218945"
+                }
+            ],
+            "id": "1505820772077641728",
+            "created_at": "2022-03-21T08:17:03.000Z",
+            "author_id": "91883269",
+            "text": "@VodafoneUK Morning Matt! Thank you! I’ve proceeded successfully \uD83D\uDE01"
+        },
+        {
+            "id": "1505817059279708168",
+            "created_at": "2022-03-21T08:02:18.000Z",
+            "author_id": "2497054676",
+            "text": "Don't forget to join @OhSoKatherine this morning at 11am for her informative #TikTok webinar for @VodafoneUK and @e_nation. Whether you're new to TikTok or need some tips to boost your efforts, there's still time to sign up below \uD83D\uDC47\n\nhttps://t.co/dfrwRTcPTI"
+        },
+        {
+            "id": "1505812602923933698",
+            "created_at": "2022-03-21T07:44:35.000Z",
+            "author_id": "91883269",
+            "text": "@VodafoneUK there seems to be an issue with the @grum offer on the #verymerewards all https://t.co/qxXTc9q0Kl"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505809621163945987",
+            "created_at": "2022-03-21T07:32:44.000Z",
+            "author_id": "31071343",
+            "text": "@VodafoneUK I'm so happy when I get a chance #InternationalDayOfHappiness #VodafoneTreats"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1498704627000233985"
+                }
+            ],
+            "id": "1505799566465146880",
+            "created_at": "2022-03-21T06:52:47.000Z",
+            "author_id": "58584101",
+            "text": "@VodafoneUK Fabulous trips to the beautiful New Forest with my 2 gorgeous girls xx https://t.co/aZilFZ4yFG"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505798640589283332",
+            "created_at": "2022-03-21T06:49:06.000Z",
+            "author_id": "19819380",
+            "text": "@VodafoneUK I’m so happy when I get back home"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505774123645079552",
+            "created_at": "2022-03-21T05:11:41.000Z",
+            "author_id": "927938467",
+            "text": "@VodafoneUK I see my family when I get home from work \uD83D\uDC4D"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505773439885402112",
+            "created_at": "2022-03-21T05:08:58.000Z",
+            "author_id": "15725599",
+            "text": "@VodafoneUK I’m so happy when you’re ready for your birthday \uD83E\uDD73\uD83D\uDE02"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505770480032169984",
+            "created_at": "2022-03-21T04:57:12.000Z",
+            "author_id": "1300413816493289473",
+            "text": "@VodafoneUK I'm so happy when I get a chance to have a great day\n\n\uD83E\uDD72"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505734582942973955",
+            "created_at": "2022-03-21T02:34:34.000Z",
+            "author_id": "2909592687",
+            "text": "@VodafoneUK I am so happy when I have a chance to see a good friend"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1503778049203924994"
+                }
+            ],
+            "id": "1505727109557334024",
+            "created_at": "2022-03-21T02:04:52.000Z",
+            "author_id": "704339870123225092",
+            "text": "@VodafoneUK Germany to get lost in the jungle \uD83D\uDE02 #DreamHoliday"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1503778049203924994"
+                }
+            ],
+            "id": "1505682215656693764",
+            "created_at": "2022-03-20T23:06:29.000Z",
+            "author_id": "724940545068535811",
+            "text": "@VodafoneUK #DreamHoliday swimming in the sea"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505680494855397382",
+            "created_at": "2022-03-20T22:59:38.000Z",
+            "author_id": "1065218754240528385",
+            "text": "@VodafoneUK I’m so happy when you’re in here and I’m so excited to see that lol I love it too much but I’m glad it wasn’t lol #VodafoneTreats \uD83D\uDE33\uD83D\uDE02"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505680144459083780",
+            "created_at": "2022-03-20T22:58:15.000Z",
+            "author_id": "697095257658408960",
+            "text": "@VodafoneUK I'm so happy when it comes to my daughter ❤❤❤❤"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505491781001134080"
+                }
+            ],
+            "id": "1505671736980815886",
+            "created_at": "2022-03-20T22:24:50.000Z",
+            "author_id": "50628631",
+            "text": "@VodafoneUK I was advised 72 hrs. The 72 hrs is up and I'm still no closer to resolution or indeed an upgrade"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505671525793419273",
+            "created_at": "2022-03-20T22:24:00.000Z",
+            "author_id": "20333121",
+            "text": "@VodafoneUK I'm so happy when you get back on the phone \n\n\uD83E\uDD23 well that's kind of fitting lol #VodafoneTreats #InternationalDayOfHappiness"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505668304546979850",
+            "created_at": "2022-03-20T22:11:12.000Z",
+            "author_id": "47466175",
+            "text": "@VodafoneUK I am so happy when Vodafone gives me uninterrupted home broadband at promised speed. https://t.co/U7LIb7ZvyB"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1498704627000233985"
+                }
+            ],
+            "id": "1505664126932205577",
+            "created_at": "2022-03-20T21:54:36.000Z",
+            "author_id": "2210898709",
+            "text": "@VodafoneUK #VodafoneTreats I got to the top of The Beacon with my dog Riley. I now have a spring in my step because i thought i would never get to the top. I do Love Spring. https://t.co/gGaomdU9sO"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1503778049203924994"
+                }
+            ],
+            "id": "1505658668028776450",
+            "created_at": "2022-03-20T21:32:54.000Z",
+            "author_id": "192608384",
+            "text": "@VodafoneUK Making friends with a bear in Hawaii! #DreamHoliday"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505646740208291845"
+                }
+            ],
+            "id": "1505646824102715392",
+            "created_at": "2022-03-20T20:45:51.000Z",
+            "author_id": "2905657017",
+            "text": "@virginhelp @Virgin @O2 @EE @VodafoneUK @virginmedia Thank you!!"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505642933529239553",
+            "created_at": "2022-03-20T20:30:23.000Z",
+            "author_id": "3108215459",
+            "text": "@VodafoneUK I’m so happy when I have spent time with my dad #InternationalDayOfHappiness"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505641804028387330",
+            "created_at": "2022-03-20T20:25:54.000Z",
+            "author_id": "716235098115469312",
+            "text": "@VodafoneUK I’m so hungry when we are walking in the sunshine. #InternationalDayOfHappiness"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505641260593340416",
+            "created_at": "2022-03-20T20:23:44.000Z",
+            "author_id": "142358555",
+            "text": "@VodafoneUK I’m so happy when you get to this house and we can eat \uD83D\uDE02#VodafoneTreats"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505639591516254211",
+            "created_at": "2022-03-20T20:17:06.000Z",
+            "author_id": "2721515906",
+            "text": "@VodafoneUK My dog asks for a lullaby (truly) and then how eyes close and he falls asleep. It's the cutest and funniest thing ever..."
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505637339166564356",
+            "created_at": "2022-03-20T20:08:09.000Z",
+            "author_id": "216027059",
+            "text": "@VodafoneUK …Vodafone kept the promises it made not to reintroduce roaming charges\n\n(Then I wake up and realise I was just dreaming)"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505635835206639626",
+            "created_at": "2022-03-20T20:02:11.000Z",
+            "author_id": "116451098",
+            "text": "@VodafoneUK I’m so happy when… doughnuts come round my house to play xbox \n\n#InternationalDayOfHappiness https://t.co/R4e2GSj6zG"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505633333648281603",
+            "created_at": "2022-03-20T19:52:14.000Z",
+            "author_id": "600121389",
+            "text": "@VodafoneUK I’m so happy when I have a moment I can msg (hahaha \uD83D\uDE02)"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505630260334891009",
+            "created_at": "2022-03-20T19:40:01.000Z",
+            "author_id": "20605878",
+            "text": "@VodafoneUK I'm so happy when you say that I love you \uD83D\uDE0D"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505628766579707904",
+            "created_at": "2022-03-20T19:34:05.000Z",
+            "author_id": "777638074213892096",
+            "text": "@VodafoneUK @redbullracing get 0pts in a GP weekend"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505626627623067653",
+            "created_at": "2022-03-20T19:25:35.000Z",
+            "author_id": "62137358",
+            "text": "@VodafoneUK The sun shines"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1498704627000233985"
+                }
+            ],
+            "id": "1505625585573412877",
+            "created_at": "2022-03-20T19:21:27.000Z",
+            "author_id": "17942486",
+            "text": "@VodafoneUK #VodafoneTreats  Enjoying a walk and spotting all the beautiful flowers like these daffodils. https://t.co/M3hTnnL2dQ"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505624083387588618",
+            "created_at": "2022-03-20T19:15:29.000Z",
+            "author_id": "218821567",
+            "text": "@VodafoneUK I'm so happy when you said that \uD83D\uDC99\uD83D\uDC9B"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505622284702203914",
+            "created_at": "2022-03-20T19:08:20.000Z",
+            "author_id": "391317123",
+            "text": "@VodafoneUK I’m so happy when you’re ready for your appointment and I’ll be back on the road for you and your lovely wife."
+        },
+        {
+            "id": "1505621593216720898",
+            "created_at": "2022-03-20T19:05:35.000Z",
+            "author_id": "2905657017",
+            "text": "I would appreciate the help for cancer charities from some of the mobile networks @Virgin @O2 @EE @VodafoneUK"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505620780893319168"
+                }
+            ],
+            "id": "1505620914838380545",
+            "created_at": "2022-03-20T19:02:53.000Z",
+            "author_id": "280678430",
+            "text": "@VodafoneUK #VodafoneTreats"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505620780893319168",
+            "created_at": "2022-03-20T19:02:21.000Z",
+            "author_id": "280678430",
+            "text": "@VodafoneUK I'm so happy when we have seen your last email as we are together! \uD83E\uDD23\uD83E\uDD23 Typical text language I'd say! \uD83E\uDD23\uD83E\uDD23\uD83E\uDD23"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505620625280450568",
+            "created_at": "2022-03-20T19:01:44.000Z",
+            "author_id": "1195379755262058496",
+            "text": "@VodafoneUK I'm so happy when I have the energy to face the outside world\n... Well then \uD83D\uDE02"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505617738546524167",
+            "created_at": "2022-03-20T18:50:16.000Z",
+            "author_id": "17942486",
+            "text": "@VodafoneUK I'm so happy that we are looking forward to seeing everyone on board with the other hands #InternationalDayOfHappiness"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1504768529433870340"
+                }
+            ],
+            "id": "1505616258259107843",
+            "created_at": "2022-03-20T18:44:23.000Z",
+            "author_id": "3257207974",
+            "text": "@EMcGougan @VodafoneUK Vodafone is a joke \uD83E\uDD23"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505616231151325189",
+            "created_at": "2022-03-20T18:44:17.000Z",
+            "author_id": "211959269",
+            "text": "@VodafoneUK I'm so happy when I get home \uD83D\uDC4F\n#VodafoneTreats\n#InternationalDayOfHappiness"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505615407885045762",
+            "created_at": "2022-03-20T18:41:00.000Z",
+            "author_id": "320326741",
+            "text": "@VodafoneUK I’m so happy when you are free and I will be able to make use of your phone #VodafoneTreats #InternationalDayOfHappiness (to be fair this is accurate as my battery dies real quick \uD83D\uDE02\uD83D\uDE02)"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505614987632553985",
+            "created_at": "2022-03-20T18:39:20.000Z",
+            "author_id": "872852693622153217",
+            "text": "@VodafoneUK Family movie and snuggles on the sofa with my boys. \uD83D\uDE00"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505611166470529029",
+            "created_at": "2022-03-20T18:24:09.000Z",
+            "author_id": "1849055040",
+            "text": "@VodafoneUK I’m so happy when I have a good day - \uD83E\uDD23 #InternationalDayOfHappiness"
+        },
+        {
+            "id": "1505607134439956482",
+            "created_at": "2022-03-20T18:08:08.000Z",
+            "author_id": "1433129808",
+            "text": "@VodafoneUK Just received this text which I assume isn’t genuine but just thought I’d throw your way for confirmation. https://t.co/B1tOhSehLm"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505605976124268547",
+            "created_at": "2022-03-20T18:03:32.000Z",
+            "author_id": "1017748478",
+            "text": "@VodafoneUK I’m so happy when I have a moment, I will be there for a while. #VodafoneTreats"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505605206922383365",
+            "created_at": "2022-03-20T18:00:28.000Z",
+            "author_id": "351200252",
+            "text": "@VodafoneUK I'm so happy when you say that #VodafoneTreats"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505491781001134080"
+                }
+            ],
+            "id": "1505604501142753282",
+            "created_at": "2022-03-20T17:57:40.000Z",
+            "author_id": "50628631",
+            "text": "@VodafoneUK I've sent a dm"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505602450488795151",
+            "created_at": "2022-03-20T17:49:31.000Z",
+            "author_id": "475134770",
+            "text": "@VodafoneUK I’m so happy when I get back to work - this is not true \uD83D\uDE02\uD83D\uDE02 #VodafoneTreats"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505601463099211780",
+            "created_at": "2022-03-20T17:45:36.000Z",
+            "author_id": "2929157482",
+            "text": "@VodafoneUK I’m so happy when you’re here and I’m glad you’re safe and happy \uD83D\uDE0A #VodafoneTreats #InternationalDayOfHappiness"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505597145910501376",
+            "created_at": "2022-03-20T17:28:26.000Z",
+            "author_id": "1243731282",
+            "text": "@VodafoneUK I'm so happy when my dog Sprout takes me on a walk! #VodafoneTreats #InternationalDayOfHappiness https://t.co/Bczvwkv1pn"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505595870720503812",
+            "created_at": "2022-03-20T17:23:22.000Z",
+            "author_id": "40209659",
+            "text": "@VodafoneUK I’m so happy when I’m not here for you and me too lol I love it so much and I hope you have not had any problems at church"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505595333379776514",
+            "created_at": "2022-03-20T17:21:14.000Z",
+            "author_id": "106791493",
+            "text": "@VodafoneUK I’m so happy when you are home and I can come pick up my dog \uD83D\uDC36 @VodafoneUK #InternationalDayOfHappiness \uD83D\uDC95\uD83D\uDC95\uD83D\uDC95\uD83D\uDC95\uD83D\uDC36\uD83D\uDC36\uD83D\uDC36\uD83D\uDC36\uD83D\uDC3E\uD83D\uDC3E\uD83D\uDC3E\uD83D\uDC3E\uD83D\uDC9D\uD83D\uDC9D\uD83D\uDC9D\uD83D\uDC9D\uD83D\uDC9D"
+        },
+        {
+            "id": "1505595053640761350",
+            "created_at": "2022-03-20T17:20:08.000Z",
+            "author_id": "106791493",
+            "text": "#VodafoneTreats I am happy when I am home with you for the weekend \uD83D\uDC36\uD83D\uDC36\uD83D\uDC3E\uD83D\uDC3E@VodafoneUK  #InternationalDayOfHappiness"
+        },
+        {
+            "referenced_tweets": [
+                {
+                    "type": "replied_to",
+                    "id": "1505484294088642563"
+                }
+            ],
+            "id": "1505592900750647297",
+            "created_at": "2022-03-20T17:11:34.000Z",
+            "author_id": "2815748087",
+            "text": "@VodafoneUK I’m so happy when…when I give to animal charities..makes me feel Good to help\n\n#InternationalDayOfHappiness"
+        }
+    ],
+    "includes": {
+        "users": [
+            {
+                "username": "diane_83",
+                "id": "192608384",
+                "name": "Diane",
+                "location": "Berks, UK"
+            },
+            {
+                "username": "Ker_Anderson",
+                "id": "569314174",
+                "name": "Ker Anderson",
+                "location": "Thatcham, England"
+            },
+            {
+                "username": "JimmyOKeefe",
+                "id": "332773970",
+                "name": "Jimbo\uD83D\uDEB4\uD83D\uDC68‍\uD83D\uDC69‍\uD83D\uDC67‍\uD83D\uDC66\uD83D\uDCA1"
+            },
+            {
+                "username": "BromleyCommuter",
+                "id": "1099514911",
+                "name": "MarkL",
+                "location": "Bromley"
+            },
+            {
+                "username": "louisekwarteng",
+                "id": "772298196",
+                "name": "louiseowusu"
+            },
+            {
+                "username": "RAWsummits",
+                "id": "1363597381254721539",
+                "name": "SummitSam"
+            },
+            {
+                "username": "PaulinKuranchie",
+                "id": "194791456",
+                "name": "Paulina Kuranchie\uD83C\uDDEC\uD83C\uDDED",
+                "location": "London, England"
+            },
+            {
+                "username": "NikkiAitchison",
+                "id": "556018303",
+                "name": "Nikki Aitchison",
+                "location": "Neston, Cheshire, England"
+            },
+            {
+                "username": "uniiskillingme",
+                "id": "42745358",
+                "name": "Mother Hannah",
+                "location": "England, United Kingdom"
+            },
+            {
+                "username": "WheelerAw",
+                "id": "368256015",
+                "name": "Andrew Wheeler",
+                "location": "ÜT: 52.046677,-0.787004"
+            },
+            {
+                "username": "FlyingScotsManJ",
+                "id": "2723841",
+                "name": "The Flying Scotsman \uD83C\uDFF4\uDB40\uDC67\uDB40\uDC62\uDB40\uDC73\uDB40\uDC63\uDB40\uDC74\uDB40\uDC7F",
+                "location": "Aberdeen, Scotland"
+            },
+            {
+                "username": "Yasminakhtar25",
+                "id": "865478035780157442",
+                "name": "Yasmin\uD83C\uDF38"
+            },
+            {
+                "username": "MobileNewsMag",
+                "id": "19937627",
+                "name": "Mobile News Magazine",
+                "location": "London"
+            },
+            {
+                "username": "sparkslabs_com",
+                "id": "825692036657459201",
+                "name": "Michael «*»",
+                "location": "Manchester, England"
+            },
+            {
+                "username": "OPPOMobileUK",
+                "id": "1052958783532601345",
+                "name": "OPPO UK",
+                "location": "United Kingdom"
+            },
+            {
+                "username": "Cunninghamster",
+                "id": "2863001",
+                "name": "Daniel Cunningham",
+                "location": "Poole, England"
+            },
+            {
+                "username": "SarahHeleneuk",
+                "id": "579197815",
+                "name": "Sarah Hélène 3.5% \uD83C\uDDFA\uD83C\uDDE6\uD83D\uDD77 #FBPA #FBPE #REJOINEU #TS",
+                "location": "NW Surrey UK"
+            },
+            {
+                "username": "AdamCorner2",
+                "id": "2241206546",
+                "name": "Adam Corner"
+            },
+            {
+                "username": "CPalmer06",
+                "id": "129848921",
+                "name": "Chris Palmer",
+                "location": "london"
+            },
+            {
+                "username": "r33_tasha",
+                "id": "753290949690810368",
+                "name": "N A T A S H A \uD83D\uDC95\uD83C\uDFF3️‍⚧️",
+                "location": "Liverpool, England"
+            },
+            {
+                "username": "VodafoneGroup",
+                "id": "466341559",
+                "name": "Vodafone Group",
+                "location": "London, UK"
+            },
+            {
+                "username": "countluckula",
+                "id": "837271780003885056",
+                "name": "ᒪeigh",
+                "location": "United Kingdom"
+            },
+            {
+                "username": "profKerfuffle",
+                "id": "1402293903894761473",
+                "name": "Professor Kerfuffle",
+                "location": "UK/FRANCE \uD83E\uDD78"
+            },
+            {
+                "username": "GOYALKAPS",
+                "id": "386486785",
+                "name": "kapil goyal",
+                "location": "United Kingdom"
+            },
+            {
+                "username": "g_wullie",
+                "id": "2644645745",
+                "name": "Wullie G Grant",
+                "location": "Aberdeen, Scotland"
+            },
+            {
+                "username": "Hawks8920",
+                "id": "171940914",
+                "name": "Luke Hawksley",
+                "location": "Nottingham"
+            },
+            {
+                "username": "gulam_h",
+                "id": "90182842",
+                "name": "Gulam Hussain",
+                "location": "London"
+            },
+            {
+                "username": "thequeenosheba",
+                "id": "107029339",
+                "name": "⚡⚡ Lisa Hughes ⚡⚡",
+                "location": "Cleckheaton, West Yorkshire"
+            },
+            {
+                "username": "kazweedon",
+                "id": "2180432083",
+                "name": "\uD83C\uDF80 \uD835\uDCA6\uD835\uDCB6\uD835\uDCCF \uD83C\uDF80",
+                "location": "♥ \uD835\uDE77\uD835\uDE8A\uD835\uDE96\uD835\uDE99\uD835\uDE9C\uD835\uDE91\uD835\uDE92\uD835\uDE9B\uD835\uDE8E, \uD835\uDE84\uD835\uDE7A ♥"
+            },
+            {
+                "username": "Beleza_Rach",
+                "id": "50628631",
+                "name": "Rachael Santangelo",
+                "location": "Edinburgh, Bonnie Scotland "
+            },
+            {
+                "username": "karenhill26",
+                "id": "478043251",
+                "name": "karen Hill",
+                "location": "devon England"
+            },
+            {
+                "username": "zmark21",
+                "id": "345636990",
+                "name": "Zo✌\uD83C\uDFFB"
+            },
+            {
+                "username": "Vickydoo",
+                "id": "70453172",
+                "name": "Victoria",
+                "location": "Scotland, United Kingdom"
+            },
+            {
+                "username": "barrientos_pena",
+                "id": "940345362409279489",
+                "name": "Isabel Pena Barrientos \uD83D\uDC99",
+                "location": "England, United Kingdom"
+            },
+            {
+                "username": "KateHow98804396",
+                "id": "907694160798474240",
+                "name": "KateH",
+                "location": "Leeds, England"
+            },
+            {
+                "username": "jemmajon",
+                "id": "91883269",
+                "name": "Jemma Jonathan",
+                "location": "Wales "
+            },
+            {
+                "username": "OhSoMarketing",
+                "id": "2497054676",
+                "name": "Oh So Social",
+                "location": "Cornwall"
+            },
+            {
+                "username": "MarkkCampion",
+                "id": "31071343",
+                "name": "Mark Campion",
+                "location": "Swansea"
+            },
+            {
+                "username": "bambam1974",
+                "id": "58584101",
+                "name": "TheresaSmithUK",
+                "location": "New Forest"
+            },
+            {
+                "username": "joan580",
+                "id": "19819380",
+                "name": "Joan Simpson",
+                "location": "North West England"
+            },
+            {
+                "username": "44SmithG45",
+                "id": "927938467",
+                "name": "G Smith",
+                "location": "North England"
+            },
+            {
+                "username": "cjohnwalsh",
+                "id": "15725599",
+                "name": "Chris Walsh",
+                "location": "Abertillery, South Wales"
+            },
+            {
+                "username": "_AndroidAsh",
+                "id": "1300413816493289473",
+                "name": "\uD83C\uDD30\uD83C\uDD42\uD83C\uDD37 \uD83C\uDFF4\uDB40\uDC67\uDB40\uDC62\uDB40\uDC65\uDB40\uDC6E\uDB40\uDC67\uDB40\uDC7F",
+                "location": "\uD83C\uDFF4\uDB40\uDC67\uDB40\uDC62\uDB40\uDC65\uDB40\uDC6E\uDB40\uDC67\uDB40\uDC7F"
+            },
+            {
+                "username": "jcr_photo",
+                "id": "2909592687",
+                "name": "JCRiddle Photography",
+                "location": "Sussex and Surrey, UK"
+            },
+            {
+                "username": "tmal1983",
+                "id": "704339870123225092",
+                "name": "Mr T",
+                "location": "United Kingdom"
+            },
+            {
+                "username": "SofiyaLulham",
+                "id": "724940545068535811",
+                "name": "SofaSushka"
+            },
+            {
+                "username": "NikkiSt84",
+                "id": "1065218754240528385",
+                "name": "Nikki",
+                "location": "Scotland, United Kingdom"
+            },
+            {
+                "username": "Jill_W7",
+                "id": "697095257658408960",
+                "name": "Jillian Whitehead",
+                "location": "Perth"
+            },
+            {
+                "username": "MoonshineMishap",
+                "id": "20333121",
+                "name": "Donna G",
+                "location": "Portsmouth, England."
+            },
+            {
+                "username": "gurupandit",
+                "id": "47466175",
+                "name": "Guru Pandit",
+                "location": "Woking, South East"
+            },
+            {
+                "username": "suzywoo321",
+                "id": "2210898709",
+                "name": "Susan Jane Gray"
+            },
+            {
+                "username": "SophieBur492",
+                "id": "2905657017",
+                "name": "Sophie burlinson",
+                "location": "Sunderland, England"
+            },
+            {
+                "username": "comper_crazy",
+                "id": "3108215459",
+                "name": "VIV \uD83D\uDC99",
+                "location": "England, United Kingdom"
+            },
+            {
+                "username": "LuckyPyerr",
+                "id": "716235098115469312",
+                "name": "James"
+            },
+            {
+                "username": "lydfp_bobbysmum",
+                "id": "142358555",
+                "name": "LydiaGough \uD83D\uDC97",
+                "location": "West midlands UK"
+            },
+            {
+                "username": "AleksE125",
+                "id": "2721515906",
+                "name": "Aleks"
+            },
+            {
+                "username": "MuffinThrower",
+                "id": "216027059",
+                "name": "That Adam fellow #ActivistLawyer",
+                "location": "London "
+            },
+            {
+                "username": "greigo_uk",
+                "id": "116451098",
+                "name": "Greg Spencer",
+                "location": "Leicester, England"
+            },
+            {
+                "username": "vickiz1905",
+                "id": "600121389",
+                "name": "Victoria Major",
+                "location": "Braunton, England"
+            },
+            {
+                "username": "nickyweller",
+                "id": "20605878",
+                "name": "Nicola-clare Weller",
+                "location": "Devon"
+            },
+            {
+                "username": "johnnyboy90",
+                "id": "777638074213892096",
+                "name": "John",
+                "location": "Manchester, England"
+            },
+            {
+                "username": "57Butler",
+                "id": "62137358",
+                "name": "Viv M"
+            },
+            {
+                "username": "nicolasadler",
+                "id": "17942486",
+                "name": "\uD83C\uDFA0Nicola Sadler\uD83C\uDFA0"
+            },
+            {
+                "username": "ColArmy86",
+                "id": "218821567",
+                "name": "ᴄᴏʟ",
+                "location": "Ｔｈｅ Ｎｏｒｔｈ Ｅａｓｔ \uD83D\uDD34⚪️"
+            },
+            {
+                "username": "00jonesey",
+                "id": "391317123",
+                "name": "Martin Jones",
+                "location": "South East, England"
+            },
+            {
+                "username": "rugbypicboy",
+                "id": "280678430",
+                "name": "spence",
+                "location": "wales"
+            },
+            {
+                "username": "lorcan51",
+                "id": "1195379755262058496",
+                "name": "Lorcan *",
+                "location": "Lincolnshire, UK \uD83C\uDDEC\uD83C\uDDE7 "
+            },
+            {
+                "username": "mrmrningstarr",
+                "id": "3257207974",
+                "name": "MrJunJunior",
+                "location": "Little London, England"
+            },
+            {
+                "username": "Kate_Kitssister",
+                "id": "211959269",
+                "name": "\uD83D\uDD06 Kate M Jones \uD83D\uDD06",
+                "location": "North Wales"
+            },
+            {
+                "username": "KellieFaggle",
+                "id": "320326741",
+                "name": "Kellie Faggle",
+                "location": "West Midlands, England"
+            },
+            {
+                "username": "AngelaField74",
+                "id": "872852693622153217",
+                "name": "Angela Field",
+                "location": "Windsor, South East"
+            },
+            {
+                "username": "kels_elise_",
+                "id": "1849055040",
+                "name": "Kelsey Ringwood"
+            },
+            {
+                "username": "shaunyp8471",
+                "id": "1433129808",
+                "name": "Shauny P ♈️ \uD83C\uDFF4\uDB40\uDC67\uDB40\uDC62\uDB40\uDC65\uDB40\uDC6E\uDB40\uDC67\uDB40\uDC7F ⚽️ \uD83C\uDFB6",
+                "location": "Leeds, England"
+            },
+            {
+                "username": "pluckypuddin",
+                "id": "1017748478",
+                "name": "Katrina Adams",
+                "location": "Lowestoft, England"
+            },
+            {
+                "username": "Trevor_Aston",
+                "id": "351200252",
+                "name": "Trevor Aston"
+            },
+            {
+                "username": "Siobhan_Lucy",
+                "id": "475134770",
+                "name": "Siobhan Lucy",
+                "location": "Cardiff, Swales"
+            },
+            {
+                "username": "keenbean0129",
+                "id": "2929157482",
+                "name": "Keen Bean",
+                "location": "United Kingdom"
+            },
+            {
+                "username": "pklidaras",
+                "id": "1243731282",
+                "name": "Polly Klidaras",
+                "location": "England"
+            },
+            {
+                "username": "paulthemessiah",
+                "id": "40209659",
+                "name": "paul walker",
+                "location": "The Big L"
+            },
+            {
+                "username": "Larissaloulou",
+                "id": "106791493",
+                "name": "LARISSAJULIE-ANNE✨",
+                "location": "London, England"
+            },
+            {
+                "username": "nansclutter",
+                "id": "2815748087",
+                "name": "nansclutter"
+            }
+        ],
+        "tweets": [
+            {
+                "id": "1503778049203924994",
+                "created_at": "2022-03-15T17:00:00.000Z",
+                "author_id": "20678384",
+                "text": "Want to #WIN a Very Big Spring Getaway worth up to 10k? \uD83C\uDFDD️\n\nUse #DreamHoliday and our generator to tell us what you'll be doing on it.\n\nCheck out #VeryMeRewards in the My Vodafone app for the chance to win more prizes \uD83C\uDF81\n\nTerms apply (ends 31/03/2022)\uD83D\uDC47\n\nhttps://t.co/HpXCBf8v0Z https://t.co/NkxMV6hdDp"
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1505992729750294533"
+                    }
+                ],
+                "id": "1506028175729610755",
+                "created_at": "2022-03-21T22:01:12.000Z",
+                "author_id": "569314174",
+                "text": "@BromleyCommuter @VodafoneUK Hi, London bridge station has poor coverage due to the persistent failure of others to decide on the best technical and commercial solution at London Bridge station. Vodafone have been working tirelessly for over 5 years now to depoy a dedicated solution but this has  failed"
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "quoted",
+                        "id": "1505992245559926792"
+                    }
+                ],
+                "id": "1505992729750294533",
+                "created_at": "2022-03-21T19:40:21.000Z",
+                "author_id": "1099514911",
+                "text": "@VodafoneUK @Ker_Anderson It doesn’t need a DM just pay some engineers to fix the network at London Bridge https://t.co/GvqlXGbQVp"
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1506000525384458248"
+                    }
+                ],
+                "id": "1506003556989558789",
+                "created_at": "2022-03-21T20:23:22.000Z",
+                "author_id": "20678384",
+                "text": "@JimmyOKeefe Hi there \uD83D\uDC4B We're sorry to hear that you wife may have been a victim of fraud and we'd love to look into what's occurred. If you drop us a DM, you'll first be presented by our BOT, if you select 'Get Started' and then 'Asked to DM', we can look into this further for you. Mo https://t.co/zZC6gSR1Ak"
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1505994019851186184"
+                    }
+                ],
+                "id": "1506002984580362240",
+                "created_at": "2022-03-21T20:21:06.000Z",
+                "author_id": "20678384",
+                "text": "@BromleyCommuter @Ker_Anderson You're able to opt into updates Mark, please enter your Mobile Number on our Network Status Checker link \uD83D\uDC47\nhttps://t.co/JaH0XHfkbZ\nWhen the issue has been resolved, you'll receive a text message. I hope this helps. Saf"
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1505993809943044101"
+                    }
+                ],
+                "id": "1506001023785226243",
+                "created_at": "2022-03-21T20:13:18.000Z",
+                "author_id": "194791456",
+                "text": "@louisekwarteng @VodafoneUK I had same issues over the weekend. They actually sent me a message acknowledging it yesterday"
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1505993809943044101"
+                    }
+                ],
+                "id": "1505999915033542663",
+                "created_at": "2022-03-21T20:08:54.000Z",
+                "author_id": "20678384",
+                "text": "@louisekwarteng Hi Louise \uD83D\uDC4B If you're having trouble with the mobile data, you can enter your postcode in your Network Status Checker \uD83D\uDC49 https://t.co/PboCGKkBnU. This will show if anything is happening in the area. If everything is looking good or its a broadband query, just let us know. Mark"
+            },
+            {
+                "id": "1505993809943044101",
+                "created_at": "2022-03-21T19:44:38.000Z",
+                "author_id": "772298196",
+                "text": "Is anyone having issues with @VodafoneUK Internet on their phones?  Mine has been very intermittent and cuts out at inopportune moments. My friend said she had similar problems on Saturday. But please let me know."
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1505992729750294533"
+                    }
+                ],
+                "id": "1505993226121056259",
+                "created_at": "2022-03-21T19:42:19.000Z",
+                "author_id": "20678384",
+                "text": "@BromleyCommuter We'd be able to discuss this in more detail with you through private DM Mark. Please click on the link in my previous message to get connected to us. Thanks. Saf"
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1505989407916138512"
+                    }
+                ],
+                "id": "1505992245559926792",
+                "created_at": "2022-03-21T19:38:25.000Z",
+                "author_id": "20678384",
+                "text": "@BromleyCommuter Hey Mark, hope you're well. We'd love to turn around your experience with us. Please drop us a private DM with more details of your query so that we can investigate further into it for you. Thank you.\nhttps://t.co/zZC6gSR1Ak\nSaf"
+            },
+            {
+                "id": "1497264134743810053",
+                "created_at": "2022-02-25T17:36:02.000Z",
+                "author_id": "1099514911",
+                "text": "@VodafoneUK @Ker_Anderson Your coverage at London Bridge station is unusable… again Might show 4G full service but nothing is getting through https://t.co/txHYfiN23d"
+            },
+            {
+                "id": "1505484294088642563",
+                "created_at": "2022-03-20T10:00:00.000Z",
+                "author_id": "20678384",
+                "text": "Use auto-correct to finish this sentence and we could surprise you with #VodafoneTreats\n\nI’m so happy when…\n\n#InternationalDayOfHappiness"
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1505974940784336905"
+                    }
+                ],
+                "id": "1505977090813927428",
+                "created_at": "2022-03-21T18:38:12.000Z",
+                "author_id": "20678384",
+                "text": "@uniiskillingme Hi \uD83D\uDC4B I'm sorry to hear you're struggling to get through, we're a bit busier than usual at the moment! Unfortunately it's not something we can assist with over social media and does need to be done over the phone with our dedicated team. Amy"
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1505930212919418880"
+                    }
+                ],
+                "id": "1505951503705649154",
+                "created_at": "2022-03-21T16:56:32.000Z",
+                "author_id": "20678384",
+                "text": "@WheelerAw Ahh which team/drivers are you a fan of?"
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1505261064174415873"
+                    }
+                ],
+                "id": "1505936609082028035",
+                "created_at": "2022-03-21T15:57:21.000Z",
+                "author_id": "825692036657459201",
+                "text": "@VodafoneUK Oh as an update, turns out the Moto G9 Play as sold by you is not compatible with Wifi Calling and your guides regarding it (after recommended/security updates) are wrong on every level.\nBut it also turns out that your checker and \"buy a new phone now!\" emails are wrong too."
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1505252248305213456"
+                    }
+                ],
+                "id": "1505261064174415873",
+                "created_at": "2022-03-19T19:12:58.000Z",
+                "author_id": "20678384",
+                "text": "@sparkslabs_com The Moto G9, if purchased from Vodafone though your Vodafone account should be Wi-Fi calling compatible, even after the down grading of 3G in 2023. If you are having issues with your device, please let us know and we can discuss the options.  Des"
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1502131772104278019"
+                    }
+                ],
+                "id": "1505645810175905797",
+                "created_at": "2022-03-20T20:41:49.000Z",
+                "author_id": "1359793034",
+                "text": "@OPPOMobileUK Just preordered this with @VodafoneUK\uD83D\uDC40\nGreat Deal and it will be an amazing upgrade to ny current one!\nCan't wait to get a phone that actually runs google services...\nAnd that sweet preorder bundle!"
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1505501563137236995"
+                    }
+                ],
+                "id": "1505921961129652230",
+                "created_at": "2022-03-21T14:59:08.000Z",
+                "author_id": "20678384",
+                "text": "@WheelerAw Did you enjoy the race?"
+            },
+            {
+                "id": "1505885719230914567",
+                "created_at": "2022-03-21T12:35:08.000Z",
+                "author_id": "1217932804325105664",
+                "text": "@VodafoneGroup customer service is the worst customer service experience you can find. 1 hour and 10 minutes on hold trying to get through &amp; it's almost guaranteed they will lie, give me wrong information or hangup on me when I do get through \uD83D\uDE21"
+            },
+            {
+                "id": "1498704627000233985",
+                "created_at": "2022-03-01T17:00:02.000Z",
+                "author_id": "20678384",
+                "text": "\uD83C\uDF3B March PHONEtography challenge \uD83C\uDF3B\n\nShare a photo from your phone of a spring adventure you’ve been on and tell us why it puts a spring in your step.\n\nWe could surprise you with #VodafoneTreats \uD83C\uDF81 or a brand new phone\uD83D\uDCF1 https://t.co/tZ84MVXVlj"
+            },
+            {
+                "id": "1505896186691137538",
+                "created_at": "2022-03-21T13:16:43.000Z",
+                "author_id": "22193193",
+                "text": "@VodafoneUK is there any particular reason why your network is getting worse in East Lothian &amp; The Borders? Dropping calls in places I used to have no issues, barely 1 bar reception in places it used to be full with 4G etc. Its like we’ve been teleported back to the year 2000 \uD83E\uDD26\uD83C\uDFFB‍♂️"
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1505869668350935042"
+                    }
+                ],
+                "id": "1505870844886753280",
+                "created_at": "2022-03-21T11:36:01.000Z",
+                "author_id": "20678384",
+                "text": "@Hawks8920 They certainly do, Luke \uD83D\uDE01 Due to GDPR we aren't allowed to announce who those lucky winners are, but you'll often see the winners themselves post about it on their own social media! Remember you've got to be in it, to win it! Matt"
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1505812602923933698"
+                    }
+                ],
+                "id": "1505820291083218945",
+                "created_at": "2022-03-21T08:15:08.000Z",
+                "author_id": "20678384",
+                "text": "@jemmajon Hi, Jemma \uD83D\uDC4B There was a slight issue with this reward earlier which I do apologise for, this has been fully resolved for you now. You'll now be able to proceed through the reward process and once you're at the final checkout stage it'll then be discounted accordingly \uD83D\uDE01 Matt"
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1505489172517302279"
+                    }
+                ],
+                "id": "1505491781001134080",
+                "created_at": "2022-03-20T10:29:45.000Z",
+                "author_id": "20678384",
+                "text": "@Beleza_Rach If you've been advised on a 72 hour wait, this will be from when you were given this time scale which will include weekends. If you were advised on a 3-5 working day wait, for example, then this wouldn't include weekends. Feel free to drop us a DM for further investigation. Jay https://t.co/zZC6gSR1Ak"
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1505621593216720898"
+                    }
+                ],
+                "id": "1505646740208291845",
+                "created_at": "2022-03-20T20:45:31.000Z",
+                "author_id": "229866445",
+                "text": "@SophieBur492 @Virgin @O2 @EE @VodafoneUK @SophieBur492 Hi Sophie, Thanks for reaching out. I shall tag in @virginmedia so they are aware of you tweet. Thanks, VH."
+            },
+            {
+                "referenced_tweets": [
+                    {
+                        "type": "replied_to",
+                        "id": "1505484294088642563"
+                    }
+                ],
+                "id": "1505620780893319168",
+                "created_at": "2022-03-20T19:02:21.000Z",
+                "author_id": "280678430",
+                "text": "@VodafoneUK I'm so happy when we have seen your last email as we are together! \uD83E\uDD23\uD83E\uDD23 Typical text language I'd say! \uD83E\uDD23\uD83E\uDD23\uD83E\uDD23"
+            },
+            {
+                "id": "1504768529433870340",
+                "created_at": "2022-03-18T10:35:49.000Z",
+                "author_id": "29812328",
+                "text": "I’ve been with @VodafoneUK for nearly 20 years. I have never won a prize draw on #verymerewards - has anyone ever actually won? #whatsthepoint #AskingForAFriend"
+            }
+        ]
+    },
+    "meta": {
+        "oldest_id": "1505592900750647297",
+        "newest_id": "1506031517923000326",
+        "result_count": 100,
+        "next_token": "7140dibdnow9c7btw420ju56kkf6uck3o1qus06vhvbjr"
+    }
+}
