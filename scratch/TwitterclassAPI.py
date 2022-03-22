@@ -10,6 +10,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
+
 class TwitterAPIData:
     """
     A class used to Extract Twitter Mentions Data.
@@ -76,6 +77,7 @@ class TwitterAPIData:
 
         bearer_token : str
             str contains authentication token
+
         """
         """
             TWITTER ID |TWITTER USERNAME
@@ -92,7 +94,7 @@ class TwitterAPIData:
         self.next_token = {}
         self.params = {"expansions": "author_id,referenced_tweets.id", "tweet.fields": "id,created_at,text,author_id",
                        "user.fields": "id,name,username,location", "max_results": 100,
-                        "pagination_token": self.next_token}
+                       "pagination_token": self.next_token}
         self.json_data = []
         self.json_response = {}
         self.user_id = [20678384, 15133627, 7117212, 118750085]
@@ -177,6 +179,7 @@ class TwitterAPIData:
         """
             It is used to extract and join the data in required format, stores into json_data list.
         """
+
         def getDataframe(dic, tweet, user):
             dic['tweet_id'] = tweet['id']
             dic['user_id'] = tweet['author_id']
@@ -196,6 +199,7 @@ class TwitterAPIData:
                 dic['replied_to_id'] = "Null"
 
             return dic
+
         tweet_list = []
         for data in self.json_response['data']:
             tweet_dic = {}
@@ -205,8 +209,8 @@ class TwitterAPIData:
             tweet_list.append(tweet_dic)
         print(f'len of tweet_list: {len(tweet_list)}')
 
-        #------------self.json_response['tweets'] vs self.json_response['users']-------------------------------------------#
-        with open(r'scratch\\companydata.json', 'r+', encoding='utf-8') as f:
+        # ------------self.json_response['tweets'] vs self.json_response['users']----------#
+        with open(os.getenv('COMAPANY_DATA'), 'r+', encoding='utf-8') as f:
             telecom_ids = json.load(f)
         reply_tweet = []
         for tweet in self.json_response['includes']['tweets']:
@@ -217,7 +221,7 @@ class TwitterAPIData:
 
                 elif tweet['author_id'] in telecom_ids.keys():
                     # ids = {'20678384':'Vodafone','7117212':'EE','118750085':'BT'}
-                    reply_dic = getDataframe(reply_dic, tweet, telecom_ids[tweet['author_id']] )
+                    reply_dic = getDataframe(reply_dic, tweet, telecom_ids[tweet['author_id']])
             reply_tweet.append(reply_dic)
         # ------------------------------------------------------------------------------------
         print(f'len of reply_tweet list in api call : {len(reply_tweet)}')
@@ -230,7 +234,7 @@ class TwitterAPIData:
         data = self.join_json()
         df = pd.DataFrame.from_records(data)
         df.drop_duplicates(inplace=True, ignore_index=False)
-        df.to_csv(r"static\\csv_files\\referedTweetsData.csv", index=False)
+        df.to_csv(f"{os.getenv('STATIC_CSVFILES')}referedTweetsData.csv", index=False)
 
 
 def main():
