@@ -97,7 +97,7 @@ class TwitterAPIData:
                        "pagination_token": self.next_token}
         self.json_data = []
         self.json_response = {}
-        self.user_id = [20678384, 15133627, 7117212, 118750085]
+        self.user_id = [20678384, 15133627, 7117212, 118750085, 158368965, 17872077, 361268597]
         self.bearer_token = os.getenv('BEARER_TOKEN')
         self.count = 0
         self.max_count = 10000
@@ -210,7 +210,7 @@ class TwitterAPIData:
         print(f'len of tweet_list: {len(tweet_list)}')
 
         # ------------self.json_response['tweets'] vs self.json_response['users']----------#
-        with open(os.getenv('COMAPANY_DATA'), 'r+', encoding='utf-8') as f:
+        with open(os.getenv('COMAPANY_DATA'), 'r+', encoding='utf-8') as f:  # type: ignore
             telecom_ids = json.load(f)
         reply_tweet = []
         for tweet in self.json_response['includes']['tweets']:
@@ -234,7 +234,7 @@ class TwitterAPIData:
         data = self.join_json()
         df = pd.DataFrame.from_records(data)
         df.drop_duplicates(inplace=True, ignore_index=False)
-        df.to_csv(f"{os.getenv('STATIC_CSVFILES')}referedTweetsData.csv", index=False)
+        df.to_csv(f"{os.getenv('STATIC_CSVFILES')}referedTweetsData2.csv", index=False)
 
 
 def main():
@@ -254,3 +254,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+# 'start_22_03_23T05_21_end_2022_03_14_T18_49'

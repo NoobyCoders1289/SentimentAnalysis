@@ -3,6 +3,10 @@ import os
 
 import pandas as pd
 
+from configparser import ConfigParser
+
+
+
 
 def joincsv(path):
     """
@@ -11,10 +15,10 @@ def joincsv(path):
         
     """
     # path to the folder 
-    path = os.path.join(path, "TweetsData*.csv")
+    folder_path = os.path.join(path, "TweetsData*.csv")
 
     # list of all files_path present in path folder
-    files_list = glob(path)
+    files_list = glob(folder_path)
     # print(join_files)
 
     # Joining csv files with concat, map
@@ -36,5 +40,13 @@ def joincsv(path):
     print('completed')
 
 
-path = r"H:\\MyLearningProjects\\PythonProjects\\SentimentAnalysis\\static\\csv_files\\"
-joincsv(path)
+if __name__ == "__main__":
+    # ConfigParse Parses the config file
+    file = 'config.ini'
+    config = ConfigParser()
+    config.read(file)
+    # path = r"H:\\MyLearningProjects\\PythonProjects\\SentimentAnalysis\\static\\csv_files\\"
+    path = config['path']['static_csvfiles']
+    # print(path)
+    joincsv(path)
+   
