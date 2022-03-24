@@ -10,7 +10,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 
-
 class TwitterAPIData:
     """
     A class used to Extract Twitter Mentions Data.
@@ -94,10 +93,13 @@ class TwitterAPIData:
         self.next_token = {}
         self.params = {"expansions": "author_id,referenced_tweets.id", "tweet.fields": "id,created_at,text,author_id",
                        "user.fields": "id,name,username,location", "max_results": 100,
+                       "end_time": "2022-03-24T20:48:00.000Z",
+                       "start_time": "2022-03-10T00:00:00.000Z",
                        "pagination_token": self.next_token}
         self.json_data = []
         self.json_response = {}
-        self.user_id = [20678384, 15133627, 7117212, 118750085, 158368965, 17872077, 361268597]
+        # 20678384, 15133627, 7117212, 118750085, 17872077
+        self.user_id = [20678384, 15133627, 7117212, 118750085, 17872077]
         self.bearer_token = os.getenv('BEARER_TOKEN')
         self.count = 0
         self.max_count = 10000
@@ -140,7 +142,7 @@ class TwitterAPIData:
                     print("url Endpoint : ", url)
                     self.write2csvfile()
                     self.count += result_count
-                    print("Total # of Tweets added: ", self.count)
+                    print("Total no of Tweets added(count): ", self.count)
                     print("Total Pages : ", page_no)
                     page_no += 1
                     time.sleep(2)
@@ -150,7 +152,7 @@ class TwitterAPIData:
                 if result_count is not None and result_count > 0:
                     self.write2csvfile()
                     self.count += result_count
-                    print("Total # of Tweets added: ", self.count)
+                    print("Total no of Tweets added(count): ", self.count)
                     print("Total Pages : ", page_no)
                     page_no += 1
                     print("----------------------------------------------------------------------------")
@@ -181,8 +183,8 @@ class TwitterAPIData:
         """
 
         def getDataframe(dic, tweet, user):
-            dic['tweet_id'] = tweet['id']
-            dic['user_id'] = tweet['author_id']
+            dic['tweet_id'] = str(tweet['id'])
+            dic['user_id'] = str(tweet['author_id'])
             dic['created_at'] = tweet['created_at']
             dic['tweet'] = tweet['text']
             dic['username'] = user['username']
@@ -207,7 +209,6 @@ class TwitterAPIData:
                 if data['author_id'] == user['id']:
                     tweet_dic = getDataframe(tweet_dic, data, user)
             tweet_list.append(tweet_dic)
-        print(f'len of tweet_list: {len(tweet_list)}')
 
         # ------------self.json_response['tweets'] vs self.json_response['users']----------#
         with open(os.getenv('COMAPANY_DATA'), 'r+', encoding='utf-8') as f:  # type: ignore
@@ -224,9 +225,10 @@ class TwitterAPIData:
                     reply_dic = getDataframe(reply_dic, tweet, telecom_ids[tweet['author_id']])
             reply_tweet.append(reply_dic)
         # ------------------------------------------------------------------------------------
-        print(f'len of reply_tweet list in api call : {len(reply_tweet)}')
         [self.json_data.append(j) or j for j in tweet_list]
         [self.json_data.append(k) or k for k in reply_tweet]
+        print(f'len of tweet_list: {len(tweet_list)}')
+        print(f'len of reply_tweet list in api call : {len(reply_tweet)}')
         print(f'len of final list : {len(self.json_data)}')
         return self.json_data
 
@@ -234,7 +236,9 @@ class TwitterAPIData:
         data = self.join_json()
         df = pd.DataFrame.from_records(data)
         df.drop_duplicates(inplace=True, ignore_index=False)
-        df.to_csv(f"{os.getenv('STATIC_CSVFILES')}referedTweetsData2.csv", index=False)
+        df['get_repliedTo_tweet_link'] = df.apply(lambda x: os.getenv('REPLIEDTWEET').format(x['replied_to_id']) if x['replied_to_id'] != 'Null' else 'null', axis=1)
+        df['get_tweet_link'] = df.apply(lambda x: os.getenv('TWEET').format(x['user_id'], x['tweet_id']), axis=1)
+        df.to_csv(f"{os.getenv('SCRATCH_CSVFILES')}start_22_03_10T00_00_end_2022_03_24_T20_49.csv", index=False)
 
 
 def main():
@@ -254,4 +258,5 @@ def main():
 
 if __name__ == "__main__":
     main()
-# 'start_22_03_23T05_21_end_2022_03_14_T18_49'
+# 'start_22_03_10T00_00_end_2022_03_24_T20_49'
+# extracted upto '2022-03-24T14:39:05.000Z' / 22_03_21T14_39 -> next start as of 24/03/22

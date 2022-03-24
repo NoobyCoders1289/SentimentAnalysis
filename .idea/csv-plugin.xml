@@ -3,6 +3,20 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="\scratch\csvfiles\start_22_03_10T00_00_end_2022_03_24_T20_49.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\scratch\csvfiles\start_22_03_23T05_21_end_2022_03_14_T18_49.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\static\csv_files\TweetsData1.csv">
           <value>
             <Attribute>
@@ -39,6 +53,20 @@
           </value>
         </entry>
         <entry key="\static\csv_files\referedTweetsData.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\static\csv_files\referedTweetsDatanow.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\static\csv_files\start_22_03_23T05_21_end_2022_03_14_T18_49.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
