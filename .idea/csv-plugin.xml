@@ -3,21 +3,28 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="\sample.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\sample2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\sample23file1.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\scratch\csvfiles\CleanedData_12_23.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\scratch\csvfiles\CleanedDatav2.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\scratch\csvfiles\CleanedDatav3.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -39,6 +46,13 @@
           </value>
         </entry>
         <entry key="\scratch\csvfiles\start_22_03_23T05_21_end_2022_03_14_T18_49v2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\scratch\start210322_10_14mm_end140322_7_46mm.csv.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

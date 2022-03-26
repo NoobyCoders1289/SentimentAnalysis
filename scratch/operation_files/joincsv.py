@@ -41,7 +41,7 @@ def joincsv(path):
 
 if __name__ == "__main__":
     # ConfigParse Parses the config file
-    file = r'H:\\MyLearningProjects\\PythonProjects\\SentimentAnalysis\\config.ini'
+    file = r'/config.ini'
     config = ConfigParser()
     config.read(file)
     # path = r"H:\\MyLearningProjects\\PythonProjects\\SentimentAnalysis\\static\\csv_files\\"
