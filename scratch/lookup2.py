@@ -106,7 +106,7 @@ class TwitterAPIData:
             if i:
                 self.urls.append(f'https://api.twitter.com/2/tweets?ids={ids[:-1]}&{tweet_fields}')
         print("urls len: ", len(self.urls))
-        print(self.urls)
+
 
     def bearer_oauth(self, r):
         """
@@ -128,6 +128,8 @@ class TwitterAPIData:
                 f"Request returned an error: {response.status_code} {response.text}"
             )
         self.json_response = response.json()
+        if response.status_code == 200:
+            self.write2csvfile()
         # return response.json()
 
     def join_json(self):
@@ -218,8 +220,8 @@ def main():
     apidata = TwitterAPIData()
     apidata.create_url(tweet_lis)
     for url in apidata.urls:
+        print(url)
         apidata.connect_to_endpoint(url)
-    apidata.write2csvfile()
 
     '''
         dumping the extracted data to json file

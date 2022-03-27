@@ -3,6 +3,13 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="\scratch\csvfiles\CleanedData2_10_24.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\scratch\csvfiles\CleanedData_12_23.csv">
           <value>
             <Attribute>
@@ -17,21 +24,7 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\scratch\csvfiles\sample.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="\scratch\csvfiles\sample2.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\scratch\csvfiles\sample23file1.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
