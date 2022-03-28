@@ -17,6 +17,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\scratch\csvfiles\final_csv_12_24.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\scratch\csvfiles\lookup.csv">
           <value>
             <Attribute>
@@ -25,13 +32,6 @@
           </value>
         </entry>
         <entry key="\scratch\csvfiles\sample2.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
-        <entry key="\scratch\csvfiles\start210322_10_14mm_end140322_7_46mm.csv.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />
@@ -53,6 +53,27 @@
           </value>
         </entry>
         <entry key="\scratch\csvfiles\start_22_03_23T05_21_end_2022_03_14_T18_49v2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\scratch\csvfiles\start_24_03_10T00_00_end_2022_03_28_T00_00.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\scratch\csvfiles\test2.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\scratch\csvfiles\test_data.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

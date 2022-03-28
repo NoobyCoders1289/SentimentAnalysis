@@ -93,8 +93,8 @@ class TwitterAPIData:
         self.next_token = {}
         self.params = {"expansions": "author_id,referenced_tweets.id", "tweet.fields": "id,created_at,text,author_id",
                        "user.fields": "id,name,username,location", "max_results": 100,
-                       "end_time": "2022-03-24T20:48:00.000Z",
-                       "start_time": "2022-03-10T00:00:00.000Z",
+                       # "end_time": "2022-03-24T20:48:00.000Z",
+                       "start_time": "2022-03-24T00:00:00.000Z",
                        "pagination_token": self.next_token}
         self.json_data = []
         self.json_response = {}
@@ -234,11 +234,11 @@ class TwitterAPIData:
 
     def write2csvfile(self):
         data = self.join_json()
-        df = pd.DataFrame.from_records(data)
+        df = pd.DataFrame(data)
         df.drop_duplicates(inplace=True, ignore_index=False)
         df['get_repliedTo_tweet_link'] = df.apply(lambda x: os.getenv('REPLIEDTWEET').format(x['replied_to_id']) if x['replied_to_id'] != 'Null' else 'null', axis=1)
         df['get_tweet_link'] = df.apply(lambda x: os.getenv('TWEET').format(x['user_id'], x['tweet_id']), axis=1)
-        df.to_csv(f"{os.getenv('SCRATCH_CSVFILES')}start_22_03_10T00_00_end_2022_03_24_T20_49.csv", index=False)
+        df.to_csv(f"{os.getenv('SCRATCH_CSVFILES')}start_2022_03_24T00_00_end_2022_03_28_T00_00.csv", index=False)
 
 
 def main():
