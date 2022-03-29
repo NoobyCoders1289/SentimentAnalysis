@@ -72,7 +72,7 @@ def cleanTxt(text):
 
 # LOADING DATA SET
 def load_data():
-    df = pd.read_csv('scratch/csvfiles/start_22_03_23T05_21_end_2022_03_14_T18_49.csv')
+    df = pd.read_csv('scratch/csvfiles/nolink/start_22_03_23T05_21_end_2022_03_14_T18_49.csv')
     # print(df.shape)
     # df.dropna(inplace=True)
     # df.isnull().sum()

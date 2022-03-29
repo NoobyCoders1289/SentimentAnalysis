@@ -38,6 +38,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="\scratch\csvfiles\start_2022_03_24T00_00_end_2022_03_28_T00_00.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\scratch\csvfiles\start_2022_03_29T00_00_end_2022_03_20_T00_00.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\scratch\csvfiles\start_22_03_10T00_00_end_2022_03_24_T20_49.csv">
           <value>
             <Attribute>
@@ -59,13 +73,6 @@
             </Attribute>
           </value>
         </entry>
-        <entry key="\scratch\csvfiles\start_24_03_10T00_00_end_2022_03_28_T00_00.csv">
-          <value>
-            <Attribute>
-              <option name="separator" value="," />
-            </Attribute>
-          </value>
-        </entry>
         <entry key="\scratch\csvfiles\test2.csv">
           <value>
             <Attribute>
@@ -74,6 +81,13 @@
           </value>
         </entry>
         <entry key="\scratch\csvfiles\test_data.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="\static\csv_files\CleanedData.csv">
           <value>
             <Attribute>
               <option name="separator" value="," />

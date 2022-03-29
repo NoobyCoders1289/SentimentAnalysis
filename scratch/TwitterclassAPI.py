@@ -82,8 +82,6 @@ class TwitterAPIData:
             TWITTER ID |TWITTER USERNAME
             20678384   |@VodafoneUK
             15133627   |@O2
-            158368965  |@ThreeUK
-            361268597  |@ThreeUKSupport
             7117212    |@EE
             118750085  |@bt_uk
             17872077   |@virginmedia
@@ -94,7 +92,7 @@ class TwitterAPIData:
         self.params = {"expansions": "author_id,referenced_tweets.id", "tweet.fields": "id,created_at,text,author_id",
                        "user.fields": "id,name,username,location", "max_results": 100,
                        # "end_time": "2022-03-24T20:48:00.000Z",
-                       "start_time": "2022-03-24T00:00:00.000Z",
+                       "start_time": "2022-03-10T00:00:00.000Z",
                        "pagination_token": self.next_token}
         self.json_data = []
         self.json_response = {}
@@ -195,7 +193,7 @@ class TwitterAPIData:
                 dic['location'] = ""
             if 'referenced_tweets' in tweet.keys():
                 dic['tweet_type'] = [r['type'] for r in tweet['referenced_tweets']][0]
-                dic['replied_to_id'] = [r['id'] for r in tweet['referenced_tweets']][0]
+                dic['replied_to_id'] = [str(r['id']) for r in tweet['referenced_tweets']][0]
             else:
                 dic['tweet_type'] = "Original_tweet"
                 dic['replied_to_id'] = "Null"
@@ -238,7 +236,7 @@ class TwitterAPIData:
         df.drop_duplicates(inplace=True, ignore_index=False)
         df['get_repliedTo_tweet_link'] = df.apply(lambda x: os.getenv('REPLIEDTWEET').format(x['replied_to_id']) if x['replied_to_id'] != 'Null' else 'null', axis=1)
         df['get_tweet_link'] = df.apply(lambda x: os.getenv('TWEET').format(x['user_id'], x['tweet_id']), axis=1)
-        df.to_csv(f"{os.getenv('SCRATCH_CSVFILES')}start_2022_03_24T00_00_end_2022_03_28_T00_00.csv", index=False)
+        df.to_csv(f"{os.getenv('SCRATCH_CSVFILES')}start_2022_03_29T00_00_end_2022_03_20_T00_00.csv", index=False)
 
 
 def main():
@@ -249,11 +247,6 @@ def main():
         if m1 == 1:
             break
 
-    '''
-        dumping the extracted data to json file
-    '''
-    # with open(r"DataExtraction\\tweetsReview.json", 'w') as file:
-    #     json.dump(apidata.json_data, file)
 
 
 if __name__ == "__main__":
