@@ -38,7 +38,7 @@ load_dotenv()
 #     return df
 
 def appost_remove(text):
-    with open(f'{os.getenv("STATIC_JSONFILES")}\contractions.json', 'r+') as file:
+    with open(f'{os.getenv("STATIC_JSONFILES")}contractions.json', 'r+') as file:
         contraction_dict = json.load(file)
 
     tokens = text.lower().replace('’', "'").replace('…', ' ').split()
@@ -72,7 +72,7 @@ def cleanTxt(text):
 
 # LOADING DATA SET
 def load_data():
-    df = pd.read_csv('scratch/csvfiles/nolink/start_22_03_23T05_21_end_2022_03_14_T18_49.csv')
+    df = pd.read_csv('static/csvfiles/newraw.csv')
     # print(df.shape)
     # df.dropna(inplace=True)
     # df.isnull().sum()
@@ -83,18 +83,20 @@ def load_data():
     # with open('static/json_files/contractions.json', 'r+') as file:
     #     contraction_dict = json.load(file)
     # appost_removal(df, contraction_dict)
-    # df['clean_text'] = df['tweet'].apply(appost_remove)
+    df['clean_text'] = df['tweet'].apply(appost_remove)
 
     # print("-------------------------------------------------")
     # # print(df.shape)
-    # df['clean_text'] = df['clean_text'].apply(cleanTxt)
+    df['clean_text'] = df['clean_text'].apply(cleanTxt)
     # print(df[['tweet', 'clean_text']])
     # df['get_repliedTo_tweet_link'] = df.apply(
     #     lambda x: os.getenv('REPLIEDTWEET').format(x['replied_to_id']) if x['replied_to_id'] != 'Null' else 'null',
     #     axis=1)
     # df['get_tweet_link'] = df.apply(lambda x: os.getenv('TWEET').format(x['user_id'], x['tweet_id']), axis=1)
     # df.to_csv(f"{os.getenv('SCRATCH_CSVFILES')}start_22_03_23T05_21_end_2022_03_14_T18_49v2.csv", index=False)
-    df.to_csv('scratch/csvfiles/CleanedDatav3.csv', index=False)
+    if 'dreamholiday' in df['clean_text']:
+        df[df['label']] = 1
+    df.to_csv('static/csvfiles/CleanedDatav3.csv', index=False)
     print("completed.............")
 
 

@@ -116,7 +116,7 @@ class TwitterAPIData:
         r.headers["User-Agent"] = "v2UserMentionsPython"
         return r
 
-    def connect_to_endpoint(self, url: object) -> object:
+    def connect_to_endpoint(self, url):
         """
             It calls the Api endpoints and stores the response into json_response dict.
         """
@@ -189,22 +189,22 @@ class TwitterAPIData:
 
     def write2csvfile(self):
         data = self.join_json()
-        df = pd.DataFrame.from_records(data)
-        df.drop_duplicates(inplace=True, ignore_index=False)
+        df = pd.DataFrame(data)
+        # df.drop_duplicates(subset=['tweet_id', 'user_id', 'created_at', 'tweet'], keep='last', inplace=True, ignore_index=True)
         df['get_repliedTo_tweet_link'] = df.apply(
-            lambda x: os.getenv('REPLIEDTWEET').format(x['replied_to_id']) if x['replied_to_id'] != 'Null' else 'null',
+            lambda x: f"https://twitter.com/i/web/status/{x['replied_to_id']}" if x['replied_to_id'] != 'Null' else 'null',
             axis=1)
-        df['get_tweet_link'] = df.apply(lambda x: os.getenv('TWEET').format(x['user_id'], x['tweet_id']), axis=1)
-        df.to_csv(f"{os.getenv('SCRATCH_CSVFILES')}lookup.csv", index=False)
-        print("completed...............")
+        df['get_tweet_link'] = df.apply(lambda x: f"https://twitter.com/{x['user_id']}/status/{x['tweet_id']}", axis=1)
+        df.to_csv(f"{os.getenv('SCRATCH_CSVFILES')}final_no_refered_2.csv", index=False)
+        print("...........................................................")
 
 
 def main():
-    file = 'H:\MyLearningProjects\PythonProjects\SentimentAnalysis\config.ini'
+    file = r'H:\\MyLearningProjects\\PythonProjects\\SentimentAnalysis\\config.ini'
     config = ConfigParser()
     config.read(file)
     path = config['path']['scratch_csvfiles']
-    df = pd.read_csv(os.path.join(path, 'sample2.csv'))
+    df = pd.read_csv(os.path.join(path, 'final_no_refered_type.csv'))
     tweet_ids = df['tweet_id'].to_list()
     n = 80
     final = [tweet_ids[i * n:(i + 1) * n] for i in range((len(tweet_ids) + n - 1) // n)]
@@ -219,15 +219,13 @@ def main():
 
     apidata = TwitterAPIData()
     apidata.create_url(tweet_lis)
+    i=1
     for url in apidata.urls:
-        print(url)
+        # print(url)
+        print(i)
+        i+=1
         apidata.connect_to_endpoint(url)
 
-    '''
-        dumping the extracted data to json file
-    '''
-    # with open(r"DataExtraction\\tweetsReview.json", 'w') as file:
-    #     json.dump(apidata.json_data, file)
 
 
 if __name__ == "__main__":

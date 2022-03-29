@@ -27,7 +27,8 @@ def joincsv(path):
     # Joining csv files with concat, map
     # converting all csv data to DataFrame with !read_csv
     df = pd.concat(map(pd.read_csv, files_list), ignore_index=True)
-
+    # df.drop(columns='Unnamed: 0')
+    df.info()
     # # Removing Duplicate records
     # # -----
     print("Before drop_duplicates: ", df.shape)
@@ -39,7 +40,7 @@ def joincsv(path):
 
     # # writing to new single Csv file
     df.to_csv(os.path.join(path, 'final_link.csv'),index=False)
-    print('completed')
+    # print('completed')
 
 
 if __name__ == "__main__":
