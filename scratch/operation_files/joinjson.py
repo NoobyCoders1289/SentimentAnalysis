@@ -85,7 +85,7 @@ import pandas as pd
 #     dicts = []
 #     [dicts.append(j) or j for j in lis_data]
 #     [dicts.append(k) or k for k in d]
-#     print(f'len of final list : {len(dicts)}')
+#     print(f'len of final.csv list : {len(dicts)}')
 #     df = pd.DataFrame(dicts)
 #     df = df.dropna()
 #     print(f'no of total records in {file_name} are {df.shape}')

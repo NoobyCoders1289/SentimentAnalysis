@@ -1,6 +1,7 @@
 import json
 import os
 import time
+import glob
 
 import pandas as pd
 from configparser import ConfigParser
@@ -107,7 +108,6 @@ class TwitterAPIData:
                 self.urls.append(f'https://api.twitter.com/2/tweets?ids={ids[:-1]}&{tweet_fields}')
         print("urls len: ", len(self.urls))
 
-
     def bearer_oauth(self, r):
         """
         Method required by bearer token authentication.
@@ -190,12 +190,11 @@ class TwitterAPIData:
     def write2csvfile(self):
         data = self.join_json()
         df = pd.DataFrame(data)
+        df = df.dropna(how='all')
         # df.drop_duplicates(subset=['tweet_id', 'user_id', 'created_at', 'tweet'], keep='last', inplace=True, ignore_index=True)
-        df['get_repliedTo_tweet_link'] = df.apply(
-            lambda x: f"https://twitter.com/i/web/status/{x['replied_to_id']}" if x['replied_to_id'] != 'Null' else 'null',
-            axis=1)
-        df['get_tweet_link'] = df.apply(lambda x: f"https://twitter.com/{x['user_id']}/status/{x['tweet_id']}", axis=1)
-        df.to_csv(f"{os.getenv('SCRATCH_CSVFILES')}final_no_refered_2.csv", index=False)
+        df['get_repliedTo_tweet_link'] = df.apply(lambda x: f"https://twitter.com/i/web/status/{str(x['replied_to_id'])}" if x['replied_to_id'] != 'Null' else 'null',axis=1)
+        df['get_tweet_link'] = df.apply(lambda x: f"https://twitter.com/{str(x['user_id'])}/status/{str(x['tweet_id'])}", axis=1)
+        df.to_csv(f"{os.getenv('SCRATCH_CSVFILES')}march.csv", index=False)
         print("...........................................................")
 
 
@@ -204,29 +203,52 @@ def main():
     config = ConfigParser()
     config.read(file)
     path = config['path']['scratch_csvfiles']
-    df = pd.read_csv(os.path.join(path, 'final_no_refered_type.csv'))
-    tweet_ids = df['tweet_id'].to_list()
-    n = 80
-    final = [tweet_ids[i * n:(i + 1) * n] for i in range((len(tweet_ids) + n - 1) // n)]
-    i = 0
-    tweet_lis = []
-    for tweet_id in final:
-        sent = ''
-        for idss in tweet_id:
-            sent += str(idss) + ","
-        tweet_lis.append(sent)
-    # print(len(tweet_lis))
+    files_list = glob.glob(os.path.join(path, 'no_refered_type/*.csv'))
+    files_list2 = glob.glob(os.path.join(path, 'nolink/*.csv'))
+    files_list3 = glob.glob(os.path.join(path, 'link/*.csv'))
 
-    apidata = TwitterAPIData()
-    apidata.create_url(tweet_lis)
-    i=1
-    for url in apidata.urls:
-        # print(url)
-        print(i)
-        i+=1
-        apidata.connect_to_endpoint(url)
+    def get_ids(files):
+        df = pd.concat(map(pd.read_csv, files), ignore_index=True)
+        tweet_ids = str(df['tweet_id'].unique().tolist())
+        return tweet_ids
+
+    list1 = get_ids(files_list)
+    list2 = get_ids(files_list2)
+    list3 = get_ids(files_list3)
+
+    list_final = list1 + list2 + list3
+    list_ = list(dict.fromkeys(list_final))
+    # print(len(list_))
+
+    print(list2)
 
 
+
+    # ex=[]
+    # for  in list_:
+    #     if "e" in i:
+    #         ex.append(i)
+    # print(len(ex))
+
+    # n = 80
+    # final = [list_[i * n:(i + 1) * n] for i in range((len(list_) + n - 1) // n)]
+    # i = 0
+    # tweet_lis = []
+    # for tweet_id in final:
+    #     sent = ''
+    #     for idss in tweet_id:
+    #         sent += str(idss) + ","
+    #     tweet_lis.append(sent)
+
+    # apidata = TwitterAPIData()
+    # apidata.create_url(tweet_lis)
+    # i = 1
+    # for url in apidata.urls:
+    #     # print(url)
+    #     print(i)
+    #     i += 1
+    #     apidata.connect_to_endpoint(url)
+    #
 
 if __name__ == "__main__":
     main()

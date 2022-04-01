@@ -7,8 +7,8 @@ import pandas as pd
 
 
 def getDataframe(dic, tweet, user):
-    dic['tweet_id'] = tweet['id']
-    dic['user_id'] = tweet['author_id']
+    dic['tweet_id'] = str(tweet['id'])
+    dic['user_id'] = str(tweet['author_id'])
     dic['created_at'] = tweet['created_at']
     dic['tweet'] = tweet['text']
     dic['username'] = user['username']
