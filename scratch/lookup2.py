@@ -1,3 +1,4 @@
+import pickle
 import json
 import os
 import time
@@ -202,52 +203,33 @@ def main():
     file = r'H:\\MyLearningProjects\\PythonProjects\\SentimentAnalysis\\config.ini'
     config = ConfigParser()
     config.read(file)
-    path = config['path']['scratch_csvfiles']
-    files_list = glob.glob(os.path.join(path, 'no_refered_type/*.csv'))
-    files_list2 = glob.glob(os.path.join(path, 'nolink/*.csv'))
-    files_list3 = glob.glob(os.path.join(path, 'link/*.csv'))
+    path = config['path']['scratch']
+    
+    with open(os.path.join(path,'final_ids.pkl'),'rb') as f:
+        list_ = pickle.load(f)
 
-    def get_ids(files):
-        df = pd.concat(map(pd.read_csv, files), ignore_index=True)
-        tweet_ids = str(df['tweet_id'].unique().tolist())
-        return tweet_ids
+ 
+    n = 80
+    final = [list_[i * n:(i + 1) * n] for i in range((len(list_) + n - 1) // n)]
+    i = 0
+    tweet_lis = []
+    for tweet_id in final:
+        sent = ''
+        for idss in tweet_id:
+            sent += str(idss) + ","
+        tweet_lis.append(sent)
+    
+    # print(len(tweet_lis))
+    # print(tweet_lis[:1])
 
-    list1 = get_ids(files_list)
-    list2 = get_ids(files_list2)
-    list3 = get_ids(files_list3)
-
-    list_final = list1 + list2 + list3
-    list_ = list(dict.fromkeys(list_final))
-    # print(len(list_))
-
-    print(list2)
-
-
-
-    # ex=[]
-    # for  in list_:
-    #     if "e" in i:
-    #         ex.append(i)
-    # print(len(ex))
-
-    # n = 80
-    # final = [list_[i * n:(i + 1) * n] for i in range((len(list_) + n - 1) // n)]
-    # i = 0
-    # tweet_lis = []
-    # for tweet_id in final:
-    #     sent = ''
-    #     for idss in tweet_id:
-    #         sent += str(idss) + ","
-    #     tweet_lis.append(sent)
-
-    # apidata = TwitterAPIData()
-    # apidata.create_url(tweet_lis)
-    # i = 1
-    # for url in apidata.urls:
-    #     # print(url)
-    #     print(i)
-    #     i += 1
-    #     apidata.connect_to_endpoint(url)
+    apidata = TwitterAPIData()
+    apidata.create_url(tweet_lis)
+    i = 1
+    for url in apidata.urls:
+        # print(url)
+        print(i)
+        i += 1
+        apidata.connect_to_endpoint(url)
     #
 
 if __name__ == "__main__":
