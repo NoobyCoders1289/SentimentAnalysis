@@ -1,3 +1,4 @@
+from ast import Break
 from configparser import ConfigParser
 import json
 import os
@@ -98,10 +99,12 @@ class TwitterAPIData:
         self.json_response = {}
         # {"viuk":"20678384", "o2":"15133627", "ee":"7117212", "bt":"118750085", "virginmed":"17872077"}
         # {"jio":"1373901961","airtel":"103323813","vi":"1287644632449343488","bsnl":"2251461926"}
-        self.user_id = [20678384, 15133627, 7117212, 118750085, 17872077]
+        # self.user_id = [20678384, 15133627, 7117212, 118750085, 17872077]
+        self.user_id = [1373901961, 103323813, 1287644632449343488, 2251461926]
         self.bearer_token = os.getenv('BEARER_TOKEN')
         self.count = 0
-        self.max_count = 10000
+        self.max_count = 100000
+        self.total_data = []
 
     def create_url(self):
         """
@@ -125,8 +128,6 @@ class TwitterAPIData:
         page_no = 1
         flag = True
         while flag:
-            # if page_no == 2:
-            #     return
             if self.count >= self.max_count:
                 return 1
             print("----------------------------------------------------------------------------")
@@ -142,6 +143,7 @@ class TwitterAPIData:
                 if result_count is not None and result_count > 0 and self.next_token is not None:
                     print("url Endpoint : ", url)
                     # self.write2csvfile()
+                    self.join_json()
                     self.count += result_count
                     print("Total no of Tweets added(count): ", self.count)
                     print("Total Pages : ", page_no)
@@ -152,6 +154,8 @@ class TwitterAPIData:
             else:
                 if result_count is not None and result_count > 0:
                     # self.write2csvfile()
+                    print("url Endpoint : ", url)
+                    self.join_json()
                     self.count += result_count
                     print("Total no of Tweets added(count): ", self.count)
                     print("Total Pages : ", page_no)
@@ -160,6 +164,7 @@ class TwitterAPIData:
                     time.sleep(2)
                 flag = False
                 self.next_token = None
+            
     def connect_to_endpoint(self, url):
         """
             It calls the Api endpoints and stores the response into json_response dict.
@@ -214,7 +219,7 @@ class TwitterAPIData:
             tweet_list.append(tweet_dic)
 
         # ------------self.json_response['re-tweets'] vs self.json_response['users']----------#
-        with open(os.path.join(self.folder_path,'json_files\\companydata.json'), 'r+', encoding='utf-8') as f:  
+        with open(os.path.join(self.folder_path,'json_files\\indiaTelecom.json'), 'r+', encoding='utf-8') as f:  
             telecom_ids = json.load(f)
         reply_tweet = []
         for tweet in self.json_response['includes']['tweets']:
@@ -233,22 +238,27 @@ class TwitterAPIData:
         print(f'len of tweet_list: {len(tweet_list)}')
         print(f'len of reply_tweet list in api call : {len(reply_tweet)}')
         print(f'len of final list : {len(self.json_data)}')
-        return self.json_data
+        # return self.json_data
+        
+    # def save_json(self):
+    #     data = self.join_json()
+    #     self.total_data.append(data)
 
     def write2csvfile(self):
         '''
             It is used to save all the extracted data stored in json_data list to csv file.
         '''
-        data = self.join_json()
-        df = pd.DataFrame(data)
+        # data = self.join_json()
+        df = pd.DataFrame(self.json_data)
         df = df.dropna(how='all')
         df.drop_duplicates(inplace=True, ignore_index=False)
         # df['created_at']=df['created_at'].astype('datetime64[ns]')
+
         df['get_repliedTo_tweet_link'] = df.apply(lambda x: f"https://twitter.com/i/web/status/{x['replied_to_id']}" if x['replied_to_id'] != 'Null' else 'null', axis=1)
         df['get_tweet_link'] = df.apply(lambda x: f"https://twitter.com/{x['user_id']}/status/{x['tweet_id']}", axis=1)
         start_date = df['created_at'].astype(str).min().split('T')[0].replace('-','_')
         end_date = df['created_at'].astype(str).max().split('T')[0].replace('-','_')
-        df.to_csv(f"{os.path.join(self.folder_path,'csv_files')}\\start_{start_date}_end_{end_date}.csv", index=False)
+        df.to_csv(f"{os.path.join(self.folder_path,'csv_files')}\\India_start_{start_date}_end_{end_date}.csv", index=False)
         
         
 def main():
@@ -263,12 +273,11 @@ def main():
     apidata.create_url()
     for url in apidata.urls:
         m1 = apidata.getting_next_page(url)
+        # # apidata.total_data.append(apidata.join_json())
         if m1 == 1:
             break
     apidata.write2csvfile()
-    # start=2
-    # end=3
-    # print(f"{os.path.join(folder_path,'csv_files')}\\{start}_{end}.csv")
+    
 
 
 
