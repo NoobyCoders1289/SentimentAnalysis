@@ -18,11 +18,9 @@ def joincsv(path):
     # list of all files_path present in path folder
     # files_list = glob(folder_path)
     # print(files_list)
-    #-------------------------------END----------------------------------------
 
     # ! ---------------- giving path of files directly---------------------------
-    files_list = [os.path.join(path, 'final_link.csv'),
-                  os.path.join(path, 'march.csv')]
+    files_list = [os.path.join(path, 'start_28_03_end_03_04.csv')]
 
     # ? Joining csv files with concat, map
     # ? converting all csv data to DataFrame with read_csv
@@ -31,7 +29,8 @@ def joincsv(path):
         df.drop(columns='Unnamed: 0',axis =1)
     except:
         pass
-    df.info()
+    # df.info()
+    print(df.describe())
 
     # !Removing Duplicate records
     print("Before drop_duplicates: ", df.shape)
@@ -40,8 +39,10 @@ def joincsv(path):
     print("After drop_duplicates: ", df.shape)
 
     # # writing to new single Csv file
-    df.to_csv(os.path.join(path, 'march14_31.csv'),index=False)
-    # print('completed')
+    start_date = '28_03'
+    end_date = '03_04'
+    df.to_csv(os.path.join(path, f'{start_date}_{end_date}.csv'),index=False)
+    print('completed')
 
 
 if __name__ == "__main__":
@@ -49,7 +50,6 @@ if __name__ == "__main__":
     file = r'H:\\MyLearningProjects\\PythonProjects\\SentimentAnalysis\\config.ini'
     config = ConfigParser()
     config.read(file)
-    # path = r"H:\\MyLearningProjects\\PythonProjects\\SentimentAnalysis\\static\\csv_files\\"
     path = config['path']['scratch_csvfiles']
     # print(path)
     joincsv(path)

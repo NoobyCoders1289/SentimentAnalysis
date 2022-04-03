@@ -79,10 +79,10 @@ file_name = 'file1'
 with open(path, 'r+', encoding='utf-8') as f:
     tweet_data = json.load(f)'''
 #------------------------------------------------
-
-files_path = os.path.join(config['path']['scratch_jsonfiles'],"*.json")
+path = config['path']['scratch_jsonfiles']
+files_path = os.path.join(path,"test.json")
 company_data = config['path']['comapany_data']
-with open(company_data, 'r+', encoding='utf-8') as f:
+with open(os.path.join(path,"companydata.json"), 'r+', encoding='utf-8') as f:
         telecom_ids = json.load(f)
 files = glob(files_path)
 for file in files:

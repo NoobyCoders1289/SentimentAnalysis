@@ -1,3 +1,4 @@
+from configparser import ConfigParser
 import json
 import os
 import time
@@ -89,10 +90,10 @@ class TwitterAPIData:
 
         self.urls = []
         self.next_token = {}
-        self.params = {"expansions": "author_id,referenced_tweets.id", "tweet.fields": "id,created_at,text,author_id",
+        self.params = {"expansions": "author_id,referenced_tweets.id", "tweet.fields": "id,created_at,text,author_id,lang",
                        "user.fields": "id,name,username,location", "max_results": 100,
                        # "end_time": "2022-03-24T20:48:00.000Z",
-                       "start_time": "2022-03-10T00:00:00.000Z",
+                       "start_time": "2022-03-28T00:00:00.000Z",
                        "pagination_token": self.next_token}
         self.json_data = []
         self.json_response = {}
@@ -234,11 +235,11 @@ class TwitterAPIData:
         data = self.join_json()
         df = pd.DataFrame(data)
         df.drop_duplicates(inplace=True, ignore_index=False)
-        df['get_repliedTo_tweet_link'] = df.apply(lambda x: os.getenv('REPLIEDTWEET').format(x['replied_to_id']) if x['replied_to_id'] != 'Null' else 'null', axis=1)
-        df['get_tweet_link'] = df.apply(lambda x: os.getenv('TWEET').format(x['user_id'], x['tweet_id']), axis=1)
-        df.to_csv(f"{os.getenv('SCRATCH_CSVFILES')}start_2022_03_29T00_00_end_2022_03_20_T00_00.csv", index=False)
-
-
+        df['get_repliedTo_tweet_link'] = df.apply(lambda x: f"https://twitter.com/i/web/status/{x['replied_to_id']}" if x['replied_to_id'] != 'Null' else 'null', axis=1)
+        df['get_tweet_link'] = df.apply(lambda x: f"https://twitter.com/{x['user_id']}/status/{x['tweet_id']}", axis=1)
+        df.to_csv(f"{os.getenv('SCRATCH_CSVFILES')}start_28_03_end_03_04.csv", index=False)
+        
+        
 def main():
     apidata = TwitterAPIData()
     apidata.create_url()
@@ -253,3 +254,5 @@ if __name__ == "__main__":
     main()
 # 'start_22_03_10T00_00_end_2022_03_24_T20_49'
 # extracted upto '2022-03-24T14:39:05.000Z' / 22_03_21T14_39 -> next start as of 24/03/22
+# config_path = os.path.join(os.getcwd(), 'config.ini')
+# f"https://twitter.com/i/web/status/{'replied_to_id'}" https://twitter.com/41894658/status/1505569241772457987

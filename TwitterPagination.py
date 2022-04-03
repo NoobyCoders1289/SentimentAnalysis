@@ -1,3 +1,5 @@
+from configparser import ConfigParser
+import json
 import os
 import time
 
@@ -75,13 +77,12 @@ class TwitterAPIData:
 
         bearer_token : str
             str contains authentication token
+
         """
         """
             TWITTER ID |TWITTER USERNAME
             20678384   |@VodafoneUK
             15133627   |@O2
-            158368965  |@ThreeUK
-            361268597  |@ThreeUKSupport
             7117212    |@EE
             118750085  |@bt_uk
             17872077   |@virginmedia
@@ -89,12 +90,15 @@ class TwitterAPIData:
 
         self.urls = []
         self.next_token = {}
-        self.params = {"expansions": "author_id,referenced_tweets.id", "tweet.fields": "id,created_at,text,author_id",
+        self.params = {"expansions": "author_id,referenced_tweets.id", "tweet.fields": "id,created_at,text,author_id,lang",
                        "user.fields": "id,name,username,location", "max_results": 100,
-                       "start_time": "2021-03-02T17:00:00Z", "pagination_token": self.next_token}
+                       # "end_time": "2022-03-24T20:48:00.000Z",
+                       "start_time": "2022-03-28T00:00:00.000Z",
+                       "pagination_token": self.next_token}
         self.json_data = []
         self.json_response = {}
-        self.user_id = [20678384, 15133627, 7117212, 118750085]
+        # 20678384, 15133627, 7117212, 118750085, 17872077
+        self.user_id = [20678384, 15133627, 7117212, 118750085, 17872077]
         self.bearer_token = os.getenv('BEARER_TOKEN')
         self.count = 0
         self.max_count = 10000
@@ -137,7 +141,7 @@ class TwitterAPIData:
                     print("url Endpoint : ", url)
                     self.write2csvfile()
                     self.count += result_count
-                    print("Total # of Tweets added: ", self.count)
+                    print("Total no of Tweets added(count): ", self.count)
                     print("Total Pages : ", page_no)
                     page_no += 1
                     time.sleep(2)
@@ -147,7 +151,7 @@ class TwitterAPIData:
                 if result_count is not None and result_count > 0:
                     self.write2csvfile()
                     self.count += result_count
-                    print("Total # of Tweets added: ", self.count)
+                    print("Total no of Tweets added(count): ", self.count)
                     print("Total Pages : ", page_no)
                     page_no += 1
                     print("----------------------------------------------------------------------------")
@@ -176,34 +180,71 @@ class TwitterAPIData:
         """
             It is used to extract and join the data in required format, stores into json_data list.
         """
-        for i in self.json_response['data']:
-            dic = {}
-            for j in self.json_response['includes']['users']:
-                if i['author_id'] == j['id']:
-                    dic['tweet_id'] = i['id']
-                    dic['user_id'] = i['author_id']
-                    dic['created_at'] = i['created_at']
-                    dic['tweet'] = i['text']
-                    dic['username'] = j['username']
-                    dic['name'] = j['name']
-                    if 'location' in j.keys():
-                        dic['location'] = j['location']
-                    else:
-                        dic['location'] = ""
-                    if 'referenced_tweets' in i.keys():
-                        dic['tweet_type'] = [j['type'] for j in i['referenced_tweets']][0]
-                    else:
-                        dic['tweet_type'] = "Original_Tweet"
-            self.json_data.append(dic)
+
+        def getDataframe(dic, tweet, user):
+            dic['tweet_id'] = str(tweet['id'])
+            dic['user_id'] = str(tweet['author_id'])
+            dic['created_at'] = tweet['created_at']
+            dic['tweet'] = tweet['text']
+            dic['username'] = user['username']
+            dic['name'] = user['name']
+            if 'location' in user.keys():
+                dic['location'] = user['location']
+            else:
+                dic['location'] = ""
+
+            if 'lang' in tweet.keys():
+                dic['language'] = tweet['lang']
+            else:
+                dic['language'] = ''
+            if 'referenced_tweets' in tweet.keys():
+                dic['tweet_type'] = [r['type'] for r in tweet['referenced_tweets']][0]
+                dic['replied_to_id'] = [str(r['id']) for r in tweet['referenced_tweets']][0]
+            else:
+                dic['tweet_type'] = "Original_tweet"
+                dic['replied_to_id'] = "Null"
+
+            return dic
+
+        tweet_list = []
+        for data in self.json_response['data']:
+            tweet_dic = {}
+            for user in self.json_response['includes']['users']:
+                if data['author_id'] == user['id']:
+                    tweet_dic = getDataframe(tweet_dic, data, user)
+            tweet_list.append(tweet_dic)
+
+        # ------------self.json_response['tweets'] vs self.json_response['users']----------#
+        with open(os.getenv('COMAPANY_DATA'), 'r+', encoding='utf-8') as f:  # type: ignore
+            telecom_ids = json.load(f)
+        reply_tweet = []
+        for tweet in self.json_response['includes']['tweets']:
+            reply_dic = {}
+            for user in self.json_response['includes']['users']:
+                if user['id'] == tweet['author_id']:
+                    reply_dic = getDataframe(reply_dic, tweet, user)
+
+                elif tweet['author_id'] in telecom_ids.keys():
+                    # ids = {'20678384':'Vodafone','7117212':'EE','118750085':'BT'}
+                    reply_dic = getDataframe(reply_dic, tweet, telecom_ids[tweet['author_id']])
+            reply_tweet.append(reply_dic)
+        # ------------------------------------------------------------------------------------
+        [self.json_data.append(j) or j for j in tweet_list]
+        [self.json_data.append(k) or k for k in reply_tweet]
+        print(f'len of tweet_list: {len(tweet_list)}')
+        print(f'len of reply_tweet list in api call : {len(reply_tweet)}')
+        print(f'len of final list : {len(self.json_data)}')
         return self.json_data
 
     def write2csvfile(self):
         data = self.join_json()
-        df = pd.DataFrame.from_records(data)
+        df = pd.DataFrame(data)
         df.drop_duplicates(inplace=True, ignore_index=False)
-        df.to_csv(r"static\\csv_files\\TweetsData4.csv", index=False)
-
-
+        df['get_repliedTo_tweet_link'] = df.apply(lambda x: f"https://twitter.com/i/web/status/{x['replied_to_id']}" if x['replied_to_id'] != 'Null' else 'null', axis=1)
+        df['get_tweet_link'] = df.apply(lambda x: f"https://twitter.com/{x['user_id']}/status/{x['tweet_id']}", axis=1)
+        df.to_csv(f"{os.getenv('SCRATCH_CSVFILES')}start_28_03_end_03_04.csv", index=False)
+        
+        
 def main():
     apidata = TwitterAPIData()
     apidata.create_url()
@@ -212,12 +253,11 @@ def main():
         if m1 == 1:
             break
 
-    '''
-        dumping the extracted data to json file
-    '''
-    # with open(r"DataExtraction\\tweetsReview.json", 'w') as file:
-    #     json.dump(apidata.json_data, file)
 
 
 if __name__ == "__main__":
     main()
+# 'start_22_03_10T00_00_end_2022_03_24_T20_49'
+# extracted upto '2022-03-24T14:39:05.000Z' / 22_03_21T14_39 -> next start as of 24/03/22
+# config_path = os.path.join(os.getcwd(), 'config.ini')
+# f"https://twitter.com/i/web/status/{'replied_to_id'}" https://twitter.com/41894658/status/1505569241772457987
