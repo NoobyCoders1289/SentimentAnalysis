@@ -60,7 +60,7 @@ class TwitterAPIData:
 
     """
 
-    def __init__(self):
+    def __init__(self,folder_path):
         """
         Attributes
         ----------
@@ -87,11 +87,11 @@ class TwitterAPIData:
             118750085  |@bt_uk
             17872077   |@virginmedia
         """
-
+        self.folder_path = folder_path
         self.urls = []
         self.next_token = {}
         self.params = {"expansions": "author_id,referenced_tweets.id", "tweet.fields": "id,created_at,text,author_id,lang",
-                       "user.fields": "id,name,username,location", "max_results": 100,
+                       "user.fields": "id,name,username,location", "max_results": 5,
                        # "end_time": "2022-03-24T20:48:00.000Z",
                        "start_time": "2022-03-28T00:00:00.000Z",
                        "pagination_token": self.next_token}
@@ -125,6 +125,8 @@ class TwitterAPIData:
         page_no = 1
         flag = True
         while flag:
+            if page_no == 2:
+                return
             if self.count >= self.max_count:
                 return 1
             print("----------------------------------------------------------------------------")
@@ -139,7 +141,7 @@ class TwitterAPIData:
 
                 if result_count is not None and result_count > 0 and self.next_token is not None:
                     print("url Endpoint : ", url)
-                    self.write2csvfile()
+                    # self.write2csvfile()
                     self.count += result_count
                     print("Total no of Tweets added(count): ", self.count)
                     print("Total Pages : ", page_no)
@@ -149,7 +151,7 @@ class TwitterAPIData:
             # if response has no next_token
             else:
                 if result_count is not None and result_count > 0:
-                    self.write2csvfile()
+                    # self.write2csvfile()
                     self.count += result_count
                     print("Total no of Tweets added(count): ", self.count)
                     print("Total Pages : ", page_no)
@@ -158,9 +160,6 @@ class TwitterAPIData:
                     time.sleep(2)
                 flag = False
                 self.next_token = None
-                return
-            time.sleep(2)
-
     def connect_to_endpoint(self, url):
         """
             It calls the Api endpoints and stores the response into json_response dict.
@@ -192,7 +191,7 @@ class TwitterAPIData:
                 dic['location'] = user['location']
             else:
                 dic['location'] = ""
-
+                
             if 'lang' in tweet.keys():
                 dic['language'] = tweet['lang']
             else:
@@ -214,8 +213,8 @@ class TwitterAPIData:
                     tweet_dic = getDataframe(tweet_dic, data, user)
             tweet_list.append(tweet_dic)
 
-        # ------------self.json_response['tweets'] vs self.json_response['users']----------#
-        with open(os.getenv('COMAPANY_DATA'), 'r+', encoding='utf-8') as f:  # type: ignore
+        # ------------self.json_response['re-tweets'] vs self.json_response['users']----------#
+        with open(os.path.join(self.folder_path,'json_files/comapanydata.json'), 'r+', encoding='utf-8') as f:  # type: ignore
             telecom_ids = json.load(f)
         reply_tweet = []
         for tweet in self.json_response['includes']['tweets']:
@@ -237,27 +236,39 @@ class TwitterAPIData:
         return self.json_data
 
     def write2csvfile(self):
+        '''
+            It is used to save all the extracted data stored in json_data list to csv file.
+        '''
         data = self.join_json()
         df = pd.DataFrame(data)
         df.drop_duplicates(inplace=True, ignore_index=False)
+        # df['created_at']=df['created_at'].astype('datetime64[ns]')
         df['get_repliedTo_tweet_link'] = df.apply(lambda x: f"https://twitter.com/i/web/status/{x['replied_to_id']}" if x['replied_to_id'] != 'Null' else 'null', axis=1)
         df['get_tweet_link'] = df.apply(lambda x: f"https://twitter.com/{x['user_id']}/status/{x['tweet_id']}", axis=1)
-        df.to_csv(f"{os.getenv('SCRATCH_CSVFILES')}start_28_03_end_03_04.csv", index=False)
+        start_date = df['created_at'].min().split('T')[0].replace('-','_')
+        end_date = df['created_at'].max().split('T')[0].replace('-','_')
+        df.to_csv(f"{os.path.join(self.folder_path,'csv_files')}start_{start_date}_end_{end_date}.csv", index=False)
         
         
 def main():
-    apidata = TwitterAPIData()
+    # file configs
+    configfile_path = os.path.join(os.getcwd(),'config.ini')
+    config = ConfigParser()
+    config.read(configfile_path)
+    folder_path = config['path']['scratch']
+
+    # ? creating object to TwitterAPIData class
+    apidata = TwitterAPIData(folder_path)
     apidata.create_url()
     for url in apidata.urls:
         m1 = apidata.getting_next_page(url)
         if m1 == 1:
             break
+    apidata.write2csvfile()
+
 
 
 
 if __name__ == "__main__":
     main()
-# 'start_22_03_10T00_00_end_2022_03_24_T20_49'
-# extracted upto '2022-03-24T14:39:05.000Z' / 22_03_21T14_39 -> next start as of 24/03/22
-# config_path = os.path.join(os.getcwd(), 'config.ini')
-# f"https://twitter.com/i/web/status/{'replied_to_id'}" https://twitter.com/41894658/status/1505569241772457987
+
