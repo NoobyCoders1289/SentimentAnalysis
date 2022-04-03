@@ -91,13 +91,13 @@ class TwitterAPIData:
         self.urls = []
         self.next_token = {}
         self.params = {"expansions": "author_id,referenced_tweets.id", "tweet.fields": "id,created_at,text,author_id,lang",
-                       "user.fields": "id,name,username,location", "max_results": 5,
-                       # "end_time": "2022-03-24T20:48:00.000Z",
+                       "user.fields": "id,name,username,location", "max_results": 100,
                        "start_time": "2022-03-28T00:00:00.000Z",
                        "pagination_token": self.next_token}
         self.json_data = []
         self.json_response = {}
-        # 20678384, 15133627, 7117212, 118750085, 17872077
+        # {"viuk":"20678384", "o2":"15133627", "ee":"7117212", "bt":"118750085", "virginmed":"17872077"}
+        # {"jio":"1373901961","airtel":"103323813","vi":"1287644632449343488","bsnl":"2251461926"}
         self.user_id = [20678384, 15133627, 7117212, 118750085, 17872077]
         self.bearer_token = os.getenv('BEARER_TOKEN')
         self.count = 0
@@ -120,13 +120,13 @@ class TwitterAPIData:
 
     def getting_next_page(self, url):
         """
-            Method to get next_token and pass it to api endpoints to get more data.
+            Method to get next_token and pass it to api endpoints to get more da                                                                                                           ta.
         """
         page_no = 1
         flag = True
         while flag:
-            if page_no == 2:
-                return
+            # if page_no == 2:
+            #     return
             if self.count >= self.max_count:
                 return 1
             print("----------------------------------------------------------------------------")
@@ -214,7 +214,7 @@ class TwitterAPIData:
             tweet_list.append(tweet_dic)
 
         # ------------self.json_response['re-tweets'] vs self.json_response['users']----------#
-        with open(os.path.join(self.folder_path,'json_files/comapanydata.json'), 'r+', encoding='utf-8') as f:  # type: ignore
+        with open(os.path.join(self.folder_path,'json_files\\companydata.json'), 'r+', encoding='utf-8') as f:  
             telecom_ids = json.load(f)
         reply_tweet = []
         for tweet in self.json_response['includes']['tweets']:
@@ -241,13 +241,14 @@ class TwitterAPIData:
         '''
         data = self.join_json()
         df = pd.DataFrame(data)
+        df = df.dropna(how='all')
         df.drop_duplicates(inplace=True, ignore_index=False)
         # df['created_at']=df['created_at'].astype('datetime64[ns]')
         df['get_repliedTo_tweet_link'] = df.apply(lambda x: f"https://twitter.com/i/web/status/{x['replied_to_id']}" if x['replied_to_id'] != 'Null' else 'null', axis=1)
         df['get_tweet_link'] = df.apply(lambda x: f"https://twitter.com/{x['user_id']}/status/{x['tweet_id']}", axis=1)
-        start_date = df['created_at'].min().split('T')[0].replace('-','_')
-        end_date = df['created_at'].max().split('T')[0].replace('-','_')
-        df.to_csv(f"{os.path.join(self.folder_path,'csv_files')}start_{start_date}_end_{end_date}.csv", index=False)
+        start_date = df['created_at'].astype(str).min().split('T')[0].replace('-','_')
+        end_date = df['created_at'].astype(str).max().split('T')[0].replace('-','_')
+        df.to_csv(f"{os.path.join(self.folder_path,'csv_files')}\\start_{start_date}_end_{end_date}.csv", index=False)
         
         
 def main():
@@ -255,7 +256,7 @@ def main():
     configfile_path = os.path.join(os.getcwd(),'config.ini')
     config = ConfigParser()
     config.read(configfile_path)
-    folder_path = config['path']['scratch']
+    folder_path = config['path']['static']
 
     # ? creating object to TwitterAPIData class
     apidata = TwitterAPIData(folder_path)
@@ -265,6 +266,9 @@ def main():
         if m1 == 1:
             break
     apidata.write2csvfile()
+    # start=2
+    # end=3
+    # print(f"{os.path.join(folder_path,'csv_files')}\\{start}_{end}.csv")
 
 
 
