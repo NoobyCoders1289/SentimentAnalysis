@@ -93,14 +93,14 @@ class TwitterAPIData:
         self.next_token = {}
         self.params = {"expansions": "author_id,referenced_tweets.id", "tweet.fields": "id,created_at,text,author_id,lang",
                        "user.fields": "id,name,username,location", "max_results": 100,
-                       "start_time": "2022-03-28T00:00:00.000Z",
+                       "start_time": "2022-04-01T00:00:00.000Z",
                        "pagination_token": self.next_token}
         self.json_data = []
         self.json_response = {}
         # {"viuk":"20678384", "o2":"15133627", "ee":"7117212", "bt":"118750085", "virginmed":"17872077"}
         # {"jio":"1373901961","airtel":"103323813","vi":"1287644632449343488","bsnl":"2251461926"}
-        # self.user_id = [20678384, 15133627, 7117212, 118750085, 17872077]
-        self.user_id = [1373901961, 103323813, 1287644632449343488, 2251461926]
+        self.user_id = [20678384, 15133627, 7117212, 118750085, 17872077]
+        # self.user_id = [1373901961, 103323813, 1287644632449343488, 2251461926]
         self.bearer_token = os.getenv('BEARER_TOKEN')
         self.count = 0
         self.max_count = 100000
@@ -219,8 +219,15 @@ class TwitterAPIData:
             tweet_list.append(tweet_dic)
 
         # ------------self.json_response['re-tweets'] vs self.json_response['users']----------#
-        with open(os.path.join(self.folder_path,'json_files\\indiaTelecom.json'), 'r+', encoding='utf-8') as f:  
-            telecom_ids = json.load(f)
+        def get_data(self,company_path):
+            with open(os.path.join(self.folder_path,company_path), 'r+', encoding='utf-8') as f:  
+                telecom_data = json.load(f)
+            return telecom_data
+
+        # path = 'json_files\\indiaTelecom.json'
+        path = 'json_files\\companydata.json'
+        
+        telecom_ids = get_data(self,path)
         reply_tweet = []
         for tweet in self.json_response['includes']['tweets']:
             reply_dic = {}
@@ -258,7 +265,8 @@ class TwitterAPIData:
         df['get_tweet_link'] = df.apply(lambda x: f"https://twitter.com/{x['user_id']}/status/{x['tweet_id']}", axis=1)
         start_date = df['created_at'].astype(str).min().split('T')[0].replace('-','_')
         end_date = df['created_at'].astype(str).max().split('T')[0].replace('-','_')
-        df.to_csv(f"{os.path.join(self.folder_path,'csv_files')}\\India_start_{start_date}_end_{end_date}.csv", index=False)
+        # df.to_csv(f"{os.path.join(self.folder_path,'csv_files')}\\India_start_{start_date}_end_{end_date}.csv", index=False)
+        df.to_csv(f"{os.path.join(self.folder_path,'csv_files')}\\UK_start_{start_date}_end_{end_date}.csv", index=False)
         
         
 def main():
