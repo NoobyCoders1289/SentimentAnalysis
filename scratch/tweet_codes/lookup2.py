@@ -101,7 +101,7 @@ class TwitterAPIData:
         It uses user_ids to creates API endpoints and stores in urls list.
         """
 
-        tweet_fields = "expansions=referenced_tweets.id,author_id&tweet.fields=id,author_id,created_at&user.fields=name,location,id,username"
+        tweet_fields = "expansions=referenced_tweets.id,author_id&tweet.fields=id,author_id,created_at,lang&user.fields=name,location,id,username"
         i = 0
         for ids in tweet_lis:
             i += 1
@@ -121,7 +121,6 @@ class TwitterAPIData:
         """
             It calls the Api endpoints and stores the response into json_response dict.
         """
-        time.sleep(5)
         response = requests.request("GET", url, auth=self.bearer_oauth)
         # print(response.status_code)
         if response.status_code != 200:
@@ -130,7 +129,7 @@ class TwitterAPIData:
             )
         self.json_response = response.json()
         if response.status_code == 200:
-            self.write2csvfile()
+            self.join_json()
         # return response.json()
 
     def join_json(self):
@@ -149,6 +148,10 @@ class TwitterAPIData:
                 dic['location'] = user['location']
             else:
                 dic['location'] = ""
+            if 'lang' in tweet.keys():
+                dic['language'] = tweet['lang']
+            else:
+                dic['language'] = ''
             if 'referenced_tweets' in tweet.keys():
                 dic['tweet_type'] = [r['type'] for r in tweet['referenced_tweets']][0]
                 dic['replied_to_id'] = [r['id'] for r in tweet['referenced_tweets']][0]
@@ -186,16 +189,20 @@ class TwitterAPIData:
         print(f'len of tweet_list: {len(tweet_list)}')
         print(f'len of reply_tweet list in api call : {len(reply_tweet)}')
         print(f'len of final list : {len(self.json_data)}')
-        return self.json_data
+        # return self.json_data
 
-    def write2csvfile(self):
-        data = self.join_json()
-        df = pd.DataFrame(data)
+    def write2csvfile(self,path):
+        df = pd.DataFrame(self.json_data)        
         df = df.dropna(how='all')
+        df.drop_duplicates(inplace=True, ignore_index=False)
         # df.drop_duplicates(subset=['tweet_id', 'user_id', 'created_at', 'tweet'], keep='last', inplace=True, ignore_index=True)
         df['get_repliedTo_tweet_link'] = df.apply(lambda x: f"https://twitter.com/i/web/status/{str(x['replied_to_id'])}" if x['replied_to_id'] != 'Null' else 'null',axis=1)
         df['get_tweet_link'] = df.apply(lambda x: f"https://twitter.com/{str(x['user_id'])}/status/{str(x['tweet_id'])}", axis=1)
-        df.to_csv(f"{os.getenv('SCRATCH_CSVFILES')}march.csv", index=False)
+        # df.to_csv(f"{os.getenv('SCRATCH_CSVFILES')}march.csv", index=False)
+        start_date = df['created_at'].astype(str).min().split('T')[0].replace('-','_')
+        end_date = df['created_at'].astype(str).max().split('T')[0].replace('-','_')
+        df.to_csv(f"{os.path.join(path,'csv_files')}\\UK_start_{start_date}_end_{end_date}.csv", index=False)
+
         print("...........................................................")
 
 
@@ -205,10 +212,9 @@ def main():
     config.read(file)
     path = config['path']['scratch']
     
-    with open(os.path.join(path,'final_ids.pkl'),'rb') as f:
+    with open(os.path.join(path,'tweet_codes\\ids.pkl'),'rb') as f:
         list_ = pickle.load(f)
 
- 
     n = 80
     final = [list_[i * n:(i + 1) * n] for i in range((len(list_) + n - 1) // n)]
     i = 0
@@ -227,10 +233,11 @@ def main():
     i = 1
     for url in apidata.urls:
         # print(url)
-        print(i)
+        print("url_no: ",i)
         i += 1
         apidata.connect_to_endpoint(url)
-    #
+    apidata.write2csvfile(path)
+    # #
 
 if __name__ == "__main__":
     main()

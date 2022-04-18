@@ -93,7 +93,7 @@ class TwitterAPIData:
         self.next_token = {}
         self.params = {"expansions": "author_id,referenced_tweets.id", "tweet.fields": "id,created_at,text,author_id,lang",
                        "user.fields": "id,name,username,location", "max_results": 100,
-                       "start_time": "2022-04-01T00:00:00.000Z",
+                       "start_time": "2022-04-10T00:00:00.000Z",
                        "pagination_token": self.next_token}
         self.json_data = []
         self.json_response = {}
@@ -247,10 +247,6 @@ class TwitterAPIData:
         print(f'len of final list : {len(self.json_data)}')
         # return self.json_data
         
-    # def save_json(self):
-    #     data = self.join_json()
-    #     self.total_data.append(data)
-
     def write2csvfile(self):
         '''
             It is used to save all the extracted data stored in json_data list to csv file.
